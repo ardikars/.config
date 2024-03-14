@@ -1,0 +1,11 @@
+[user]
+	email = contact@ardikars.com
+	name = Ardika Rommy Sanjaya
+[commit]
+	gpgsign = false
+[core]
+	editor = nvim
+[color]
+	ui = true
+[pull]
+	rebase = true

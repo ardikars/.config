@@ -9,3 +9,6 @@
 
 # ignore files and sub dirs in the /nvim directory
 /nvim/plugin/
+
+# do not ignore git dir
+!/git
