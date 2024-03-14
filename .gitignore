@@ -15,3 +15,6 @@
 
 # do not ignore fish dir
 !/tmux/
+
+# do not ignore fish dir
+!/fish/
