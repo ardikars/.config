@@ -11,4 +11,7 @@
 /nvim/plugin/
 
 # do not ignore git dir
-!/git
+!/git/
+
+# do not ignore fish dir
+!/tmux/
