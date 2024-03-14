@@ -1,6 +1,9 @@
 [user]
 	email = contact@ardikars.com
 	name = Ardika Rommy Sanjaya
+	signingkey = 3941EC75119F398A
+[init]
+	defaultBranch = main
 [commit]
 	gpgsign = false
 [core]
