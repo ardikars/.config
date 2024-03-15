@@ -12,3 +12,4 @@
 	ui = true
 [pull]
 	rebase = true
+	ff = false
