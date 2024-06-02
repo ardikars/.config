@@ -31,4 +31,10 @@ return require('packer').startup(function(use)
 				  'MunifTanjim/nui.nvim',
     }
   }
-end)
+
+  use {
+		  'akinsho/bufferline.nvim',
+		  tag = "*",
+		  requires = 'nvim-tree/nvim-web-devicons'
+  }
+  end)
