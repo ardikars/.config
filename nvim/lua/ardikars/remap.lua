@@ -6,7 +6,6 @@ vim.g.mapleader = " "
 keymap("n", "<C-z>", "<nop>", opts)
 
 keymap('n', '<leader>ls', vim.cmd.Ex)
-keymap('n', '<leader>tt', vim.cmd.Neotree)
 
 keymap('v', 'J', ":m '>+1<CR>gv=gv")
 keymap('v', 'K', ":m '<-2<CR>gv=gv")
