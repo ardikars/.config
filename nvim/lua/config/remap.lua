@@ -27,3 +27,10 @@ keymap('i', '<Up>', '<Nop>', opts)
 keymap('i', '<Down>', '<Nop>', opts)
 keymap('i', '<Left>', '<Nop>', opts)
 keymap('i', '<Right>', '<Nop>', opts)
+
+keymap('n', '<leader>bp', vim.cmd.bprevious)
+keymap('n', '<leader>bn', vim.cmd.bnext)
+keymap('n', '<leader>bf', vim.cmd.bfirst)
+keymap('n', '<leader>bl', vim.cmd.blast)
+keymap('n', '<leader>bd', vim.cmd.bdelete)
+
