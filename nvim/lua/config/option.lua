@@ -9,7 +9,7 @@ local options = {
   shiftwidth = 2,
 	ignorecase = true,
 	hlsearch = false,
-	warp = true,
+	wrap = true,
 	breakindent = true,
 }
 
