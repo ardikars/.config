@@ -4,8 +4,13 @@ local options = {
 	number = true,
 	relativenumber = true,
 	termguicolors = true,
-	tabstop=2,
-  shiftwidth=2,
+	tabstop = 2,
+	expandtab = false,
+  shiftwidth = 2,
+	ignorecase = true,
+	hlsearch = false,
+	warp = true,
+	breakindent = true,
 }
 
 for k, v in pairs(options) do
