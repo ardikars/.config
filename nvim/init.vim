@@ -10,6 +10,9 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'Julian/lean.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'andrewradev/switch.vim'  " For Lean switch support
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
