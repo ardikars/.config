@@ -16,6 +16,10 @@ require('telescope').setup({
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-l>"] = actions.preview_scrolling_up,
+        ["<A-h>"] = actions.preview_scrolling_down,
+        ["<A-j>"] = actions.move_selection_next,
+        ["<A-k>"] = actions.move_selection_previous,
+        ["<A-l>"] = actions.preview_scrolling_up,
       },
       n = {
         -- Disable arrow keys
@@ -28,6 +32,10 @@ require('telescope').setup({
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-l>"] = actions.preview_scrolling_up,
+        ["<A-h>"] = actions.preview_scrolling_down,
+        ["<A-j>"] = actions.move_selection_next,
+        ["<A-k>"] = actions.move_selection_previous,
+        ["<A-l>"] = actions.preview_scrolling_up,
       },
     },
   },
