@@ -7,17 +7,11 @@
 # do not ignore nvim dir
 !/nvim/
 
-# ignore files and sub dirs in the /nvim directory
-/nvim/plugin/
-
 # do not ignore git dir
 !/git/
 
 # do not ignore fish dir
 !/tmux/
-
-# do not ignore fish dir
-# !/fish/
 
 # do not ignore README.md
 !/README.md

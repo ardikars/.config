@@ -11,10 +11,9 @@ local options = {
   hlsearch = false,
   wrap = true,
   breakindent = true,
-	clipboard = "unnamedplus"
+  clipboard = "unnamedplus",
 }
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+  vim.opt[k] = v
 end
-

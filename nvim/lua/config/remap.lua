@@ -54,4 +54,3 @@ keymap('i', '<A-k>', vim.cmd.bprevious)
 keymap('i', '<A-l>', vim.cmd.bnext)
 keymap('i', '<A-j>', vim.cmd.bnext)
 keymap('i', '<A-d>', vim.cmd.bdelete)
-
