@@ -9,6 +9,8 @@ require("mason").setup({
 })
 
 local servers = { 'lua_ls', 'pyright', 'rust_analyzer' }
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
 
 require("mason-lspconfig").setup {
   ensure_installed = servers,
@@ -43,3 +45,53 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
+
+require("mason-nvim-dap").setup({
+	ensure_installed = { "codelldb" },
+  automatic_installation = true,
+})
+
+local dap = require('dap')
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    command = vim.fn.stdpath("data") .. "/mason/packages/codelldb/extension/adapter/codelldb",
+    args = { "--port", "${port}" },
+  }
+}
+
+dap.configurations.rust = {
+  {
+    name = "Debug Rust",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    args = {},
+  },
+}
+
+keymap("n", "<A-N>", dap.continue, opts)
+keymap("n", "<A-nn>", dap.step_over, opts)
+keymap("n", "<A-n>", dap.step_into, opts)
+keymap("n", "<A-nnn>", dap.step_out, opts)
+keymap("n", "<A-b>", dap.toggle_breakpoint, opts)
+
+require("dapui").setup()
+local dap, dapui = require("dap"), require("dapui")
+dap.listeners.before.attach.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+  dapui.close()
+end
