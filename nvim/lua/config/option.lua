@@ -11,6 +11,7 @@ local options = {
   hlsearch = false,
   wrap = true,
   breakindent = true,
+	clipboard = "unnamedplus"
 }
 
 for k, v in pairs(options) do
