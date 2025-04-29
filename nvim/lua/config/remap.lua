@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 keymap("n", "<C-z>", "<nop>", opts)
 
 -- list file in current directory
-keymap('n', '<C-A-l>', vim.cmd.Ex)
+keymap('n', '<C-A-l>', vim.cmd.Vex)
 
 -- moving multiple line up and down
 keymap('v', 'J', ":m '>+1<CR>gv=gv")

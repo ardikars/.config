@@ -12,12 +12,10 @@ require('telescope').setup({
         ["<Left>"] = false,
         ["<Right>"] = false,
         -- Customize
-        ["<C-h>"] = actions.move_selection_previous,
+        ["<C-h>"] = actions.preview_scrolling_down,
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
-        ["<C-l>"] = actions.move_selection_next,
-        ["<C-Up>"] = actions.preview_scrolling_up,
-        ["<C-Down>"] = actions.preview_scrolling_down,
+        ["<C-l>"] = actions.preview_scrolling_up,
       },
       n = {
         -- Disable arrow keys
@@ -26,12 +24,10 @@ require('telescope').setup({
         ["<Left>"] = false,
         ["<Right>"] = false,
         -- Customize
-        ["<C-h>"] = actions.move_selection_previous,
+        ["<C-h>"] = actions.preview_scrolling_down,
         ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
-        ["<C-l>"] = actions.move_selection_next,
-        ["<C-Up>"] = actions.preview_scrolling_up,
-        ["<C-Down>"] = actions.preview_scrolling_down,
+        ["<C-l>"] = actions.preview_scrolling_up,
       },
     },
   },
@@ -43,10 +39,15 @@ keymap('n', '<C-A-f>', function ()
     hidden = true,
     file_ignore_patterns = {
       ".git/",
-			"__pycache__/",
-			"venv/",
-			"%.lock",
-			"%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf",
+      "__pycache__/",
+      "venv/",
+      "target/",
+      "build/",
+      "%.lock",
+      "%.DS_Store",
+      "%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf", "%.bmp",
+      "%.mp3", "%.wav", "%.ogg", "%.flac",
+      "%.mp4", "%.mkv", "%.avi", "%.mov", "%.webm", "%.flv",
     }
   })
 end)
