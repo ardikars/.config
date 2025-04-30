@@ -25,6 +25,9 @@ keymap('v', '<C-c>', '<Esc>', opts)
 -- disable Ex mode (a weird old mode from classic Vim)
 keymap('n', 'Q', '<nop>', opts)
 
+-- exec last command
+keymap('n', '<Leader><CR>', ':@:<CR>', opts)
+
 -- disable arrow keys
 keymap('n', '<Up>', '<Nop>', opts)
 keymap('n', '<Down>', '<Nop>', opts)

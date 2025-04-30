@@ -16,6 +16,13 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 " Treesitter (syntax highlighting)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" NVim Test
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'nvim-neotest/neotest'
+" NVim Test - Rust (require cargo-nextest)
+Plug 'rouge8/neotest-rust'
+
 " Language Server Protocol (LSP)
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
