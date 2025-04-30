@@ -10,7 +10,7 @@
 # do not ignore git dir
 !/git/
 
-# do not ignore fish dir
+# do not ignore tmux dir
 !/tmux/
 
 # do not ignore README.md
