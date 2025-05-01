@@ -37,12 +37,11 @@ require('telescope').setup({
         ["<A-k>"] = actions.move_selection_previous,
         ["<A-l>"] = actions.preview_scrolling_up,
       },
-    },
+   },
   },
 })
 
-keymap('n', '<A-f>', builtin.buffers, {})
-keymap('n', '<C-A-f>', function ()
+keymap({'n', 'i', 'v'}, '<C-A-f>', function ()
   builtin.find_files({
     hidden = true,
     file_ignore_patterns = {
@@ -59,4 +58,4 @@ keymap('n', '<C-A-f>', function ()
     }
   })
 end)
-keymap('n', '<C-A-g>', builtin.live_grep, {})
+keymap({'n', 'i', 'v'}, '<C-A-g>', builtin.live_grep, {})

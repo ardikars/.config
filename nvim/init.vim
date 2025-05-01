@@ -5,10 +5,6 @@ call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
-" List dir
-Plug 'nvim-tree/nvim-web-devicons' " optional
-Plug 'nvim-tree/nvim-tree.lua'
-
 " Bufferline (buffer tabs)
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
