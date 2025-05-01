@@ -34,9 +34,11 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-"" DAP
+
+" Debugger (DAP)
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'jay-babu/mason-nvim-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()

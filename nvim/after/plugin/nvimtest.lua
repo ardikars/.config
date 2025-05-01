@@ -1,3 +1,8 @@
+local neotest = require("neotest")
+
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
 require("neotest").setup({
   adapters = {
     require("neotest-rust") {
@@ -6,16 +11,14 @@ require("neotest").setup({
   }
 })
 
-local opts = { noremap = true, silent = true }
-local keymap = vim.keymap.set
-
 keymap('n', '<Leader>t', function ()
-  require("neotest").run.run()
-	require("neotest").summary.open()
+  neotest.run.run()
+	neotest.summary.open()
 end, opts)
 keymap('n', '<Leader>tt', function ()
-	require("neotest").summary.close()
+	neotest.summary.close()
 end, opts)
 keymap('n', '<Leader>ttt', function ()
-	require("neotest").run.stop()
+	neotest.run.stop()
 end, opts)
+
