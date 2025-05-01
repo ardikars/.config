@@ -21,16 +21,16 @@ keymap('n', '<A-Y>', '\"+Y', opts)
 
 -- back to normal mode from insert/visual mode
 keymap({'i', 'v'}, '<C-c>', '<Esc>', opts)
-keymap({'t'},      '<C-c>', '<c-\\><c-n>', opts)
+keymap({'t'},      '<Esc><Esc>', '<C-\\><C-n>', opts)
 
 -- disable Ex mode (a weird old mode from classic Vim)
 keymap('n', 'Q', '<nop>', opts)
 
 -- disable arrow keys
-keymap({'n', 'i', 'v', 't'}, '<Up>', '<Nop>', opts)
-keymap({'n', 'i', 'v', 't'}, '<Down>', '<Nop>', opts)
-keymap({'n', 'i', 'v', 't'}, '<Left>', '<Nop>', opts)
-keymap({'n', 'i', 'v', 't'}, '<Right>', '<Nop>', opts)
+keymap({'n', 'i', 'v'}, '<Up>', '<Nop>', opts)
+keymap({'n', 'i', 'v'}, '<Down>', '<Nop>', opts)
+keymap({'n', 'i', 'v'}, '<Left>', '<Nop>', opts)
+keymap({'n', 'i', 'v'}, '<Right>', '<Nop>', opts)
 
 keymap({'n', 'i', 'v'}, '<A-h>', vim.cmd.bprevious)
 keymap({'n', 'i', 'v'}, '<A-k>', vim.cmd.bprevious)

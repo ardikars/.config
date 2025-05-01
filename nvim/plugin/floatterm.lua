@@ -50,6 +50,10 @@ local toggle_terminal = function()
   end
 end
 
-vim.api.nvim_create_user_command("Floaterm", toggle_terminal, {})
+vim.api.nvim_create_user_command("Floatterm", toggle_terminal, {})
 
-vim.keymap.set({'i', 'v', 'n', 't'}, '<C-A-t>', ':Floaterm', { noremap = true, silent = true })
+vim.keymap.set('t', '<A-t>', '<c-\\><c-n>:Floatterm<CR>', { noremap = true, silent = true })
+vim.keymap.set('t', '<C-c>', function()
+  vim.api.nvim_chan_send(vim.b.terminal_job_id, '\003')
+end, { noremap = true })
+vim.keymap.set('n', '<A-t>', ':Floatterm<CR>i', { noremap = true, silent = true })

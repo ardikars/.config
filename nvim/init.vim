@@ -1,12 +1,16 @@
 lua require('config')
 
 call plug#begin()
+" Show Neovim status
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
 " Telescope (Find file/words)
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
 " Bufferline (buffer tabs)
-Plug 'nvim-tree/nvim-web-devicons'
+" dup: Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 " Treesitter (syntax highlighting)
