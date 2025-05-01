@@ -33,7 +33,7 @@ require('telescope').setup({
   },
 })
 
-keymap({'n', 'i', 'v'}, '<A-f>', function ()
+keymap({'n'}, '<Leader>f', function ()
   builtin.find_files({
     hidden = true,
     file_ignore_patterns = {
@@ -51,7 +51,7 @@ keymap({'n', 'i', 'v'}, '<A-f>', function ()
   })
 end)
 
-keymap({'n', 'i', 'v'}, '<A-F>', function ()
+keymap({'n'}, '<Leader>g', function ()
   builtin.live_grep({
     hidden = true,
     file_ignore_patterns = {

@@ -46,8 +46,8 @@ dap.listeners.before.event_exited.dapui_config = function()
 end
 
 keymap("n", "<A-N>", dap.continue, opts)
-keymap("n", "<A-nn>", dap.step_over, opts)
 keymap("n", "<A-n>", dap.step_into, opts)
+keymap("n", "<A-nn>", dap.step_over, opts)
 keymap("n", "<A-nnn>", dap.step_out, opts)
-keymap("n", "<A-b>", dap.toggle_breakpoint, opts)
+keymap("n", "<Leader>b", dap.toggle_breakpoint, opts)
 
