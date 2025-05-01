@@ -37,10 +37,10 @@ cmp.setup({
     {name = 'buffer', keyword_length = 3},
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-l>'] = cmp.mapping.scroll_docs(4),
-    ['<C-h>'] = cmp.mapping.scroll_docs(-4),
+    ['<A-k>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<A-j>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<A-l>'] = cmp.mapping.scroll_docs(4),
+    ['<A-h>'] = cmp.mapping.scroll_docs(-4),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
@@ -75,14 +75,14 @@ dap.configurations.rust = {
   },
 }
 
-keymap("n", "<A-N>", dap.continue, opts)
-keymap("n", "<A-nn>", dap.step_over, opts)
-keymap("n", "<A-n>", dap.step_into, opts)
-keymap("n", "<A-nnn>", dap.step_out, opts)
-keymap("n", "<A-b>", dap.toggle_breakpoint, opts)
+keymap("n", "<F5>", dap.continue, opts)
+keymap("n", "<F10>", dap.step_over, opts)
+keymap("n", "<F11>", dap.step_into, opts)
+keymap("n", "<F12>", dap.step_out, opts)
+keymap("n", "<Leader>b", dap.toggle_breakpoint, opts)
 
 require("dapui").setup()
-local dap, dapui = require("dap"), require("dapui")
+local dapui = require("dapui")
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
 end

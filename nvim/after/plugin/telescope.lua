@@ -12,10 +12,6 @@ require('telescope').setup({
         ["<Left>"] = false,
         ["<Right>"] = false,
         -- Customize
-        ["<C-h>"] = actions.preview_scrolling_down,
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-        ["<C-l>"] = actions.preview_scrolling_up,
         ["<A-h>"] = actions.preview_scrolling_down,
         ["<A-j>"] = actions.move_selection_next,
         ["<A-k>"] = actions.move_selection_previous,
@@ -28,10 +24,6 @@ require('telescope').setup({
         ["<Left>"] = false,
         ["<Right>"] = false,
         -- Customize
-        ["<C-h>"] = actions.preview_scrolling_down,
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous,
-        ["<C-l>"] = actions.preview_scrolling_up,
         ["<A-h>"] = actions.preview_scrolling_down,
         ["<A-j>"] = actions.move_selection_next,
         ["<A-k>"] = actions.move_selection_previous,
@@ -41,7 +33,7 @@ require('telescope').setup({
   },
 })
 
-keymap({'n', 'i', 'v'}, '<C-A-f>', function ()
+keymap({'n', 'i', 'v'}, '<A-f>', function ()
   builtin.find_files({
     hidden = true,
     file_ignore_patterns = {
@@ -58,4 +50,21 @@ keymap({'n', 'i', 'v'}, '<C-A-f>', function ()
     }
   })
 end)
-keymap({'n', 'i', 'v'}, '<C-A-g>', builtin.live_grep, {})
+
+keymap({'n', 'i', 'v'}, '<A-F>', function ()
+  builtin.live_grep({
+    hidden = true,
+    file_ignore_patterns = {
+      ".git/",
+      "__pycache__/",
+      "venv/",
+      "target/",
+      "build/",
+      "%.lock",
+      "%.DS_Store",
+      "%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf", "%.bmp",
+      "%.mp3", "%.wav", "%.ogg", "%.flac",
+      "%.mp4", "%.mkv", "%.avi", "%.mov", "%.webm", "%.flv",
+    }
+  })
+end)
