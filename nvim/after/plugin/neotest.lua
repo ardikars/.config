@@ -18,6 +18,7 @@ end, opts)
 
 keymap('n', '<Leader>tt', function ()
 	neotest.output_panel.clear()
+	neotest.output_panel.close()
 end, opts)
 
 keymap('n', '<Leader>ttt', function ()
