@@ -14,14 +14,16 @@ require("neotest").setup({
 keymap('n', '<Leader>t', function ()
 	neotest.run.run()
 	neotest.output_panel.open()
+	neotest.summary.open()
 end, opts)
 
 keymap('n', '<Leader>tt', function ()
+	neotest.summary.close()
 	neotest.output_panel.clear()
 	neotest.output_panel.close()
 end, opts)
 
-keymap('n', '<Leader>ttt', function ()
+keymap('n', '<Leader>T', function ()
 	neotest.run.stop()
 end, opts)
 
