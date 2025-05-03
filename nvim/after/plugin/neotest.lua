@@ -11,20 +11,16 @@ require("neotest").setup({
   }
 })
 
-neotest.listeners = {
-  run = {
-    finished = function()
-      vim.cmd("wincmd j") -- focus bottom panel
-    end,
-  },
-}
-
-keymap('n', '<Leader>tt', function ()
-  neotest.run.run()
-	neotest.output_panel.open();
+keymap('n', '<Leader>t', function ()
+	neotest.run.run()
+	neotest.output_panel.open()
 end, opts)
 
-keymap('n', '<Leader>ts', function ()
+keymap('n', '<Leader>tt', function ()
+	neotest.output_panel.clear()
+end, opts)
+
+keymap('n', '<Leader>ttt', function ()
 	neotest.run.stop()
 end, opts)
 
