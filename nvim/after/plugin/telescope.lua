@@ -33,6 +33,10 @@ require('telescope').setup({
   },
 })
 
+local opts = { noremap = true, silent = true }
+keymap('n', 'gd', builtin.lsp_definitions, vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
+keymap('n', 'gr', builtin.lsp_references, vim.tbl_extend('force', opts, { desc = 'Find references (Telescope)' }))
+
 keymap({'n'}, '<Leader>f', function ()
   builtin.find_files({
     hidden = true,
