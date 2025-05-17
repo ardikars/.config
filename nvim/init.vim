@@ -1,6 +1,9 @@
 lua require('config')
 
 call plug#begin()
+" Motion
+Plug 'ggandor/leap.nvim'
+
 " Show Neovim status
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
