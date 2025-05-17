@@ -44,3 +44,5 @@ cmp.setup({
   }),
 })
 
+local keymap = vim.keymap.set
+keymap('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true, buffer = bufnr })

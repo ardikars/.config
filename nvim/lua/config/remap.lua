@@ -3,6 +3,9 @@ local keymap = vim.keymap.set
 
 vim.g.mapleader = " "
 
+-- file explorer
+-- keymap("n", "<Leader>l", vim.cmd.Ex, opts);
+
 -- prevent freezes/suspends (go back to terminal shell)
 keymap("n", "<C-z>", "<nop>", opts)
 

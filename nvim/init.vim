@@ -9,6 +9,12 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
+" :Explorer
+Plug 'stevearc/oil.nvim'
+
+" Git
+Plug 'lewis6991/gitsigns.nvim'
+
 " Bufferline (buffer tabs)
 " dup: Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
@@ -34,6 +40,9 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+
+" LSP diagnostic virtual text
+Plug 'rachartier/tiny-inline-diagnostic.nvim'
 
 " Debugger (DAP)
 Plug 'mfussenegger/nvim-dap'
