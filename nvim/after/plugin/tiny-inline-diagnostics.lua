@@ -29,10 +29,10 @@ require("tiny-inline-diagnostic").setup({
 
     options = {
         -- Display the source of the diagnostic (e.g., basedpyright, vsserver, lua_ls etc.)
-	show_source = {
-	    enabled = false,
-	    if_many = false,
-	},
+				show_source = {
+				    enabled = false,
+				    if_many = false,
+				},
 
         -- Use icons defined in the diagnostic configuration
         use_icons_from_diagnostic = false,
@@ -78,7 +78,7 @@ require("tiny-inline-diagnostic").setup({
         -- If enabled, it is better to set the `throttle` option to 0 to avoid visual artifacts
         enable_on_insert = false,
 
-		-- Enable diagnostics in Select mode (e.g when auto inserting with Blink)
+				-- Enable diagnostics in Select mode (e.g when auto inserting with Blink)
         enable_on_select = false,
 
         overflow = {
