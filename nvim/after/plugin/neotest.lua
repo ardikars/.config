@@ -4,26 +4,31 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 require("neotest").setup({
-  adapters = {
-    require("neotest-rust") {
-        args = { "--no-capture" },
-    }
-  }
+	adapters = {
+		require("neotest-rust") {
+			args = { "--no-capture" },
+		}
+	}
 })
 
-keymap('n', '<Leader>t', function ()
+keymap('n', '<Leader>t', function()
 	neotest.run.run()
-	neotest.output_panel.open()
-	neotest.summary.open()
 end, opts)
 
-keymap('n', '<Leader>tt', function ()
-	neotest.summary.close()
-	neotest.output_panel.clear()
+keymap('n', '<Leader>to', function()
+	neotest.output_panel.open()
+end, opts)
+
+keymap('n', '<Leader>too', function()
 	neotest.output_panel.close()
 end, opts)
 
-keymap('n', '<Leader>T', function ()
-	neotest.run.stop()
+keymap('n', '<Leader>tc', function()
+	if neotest.output_panel then
+		neotest.output_panel.clear()
+	end
 end, opts)
 
+keymap('n', '<Leader>ts', function()
+	neotest.run.stop()
+end, opts)
