@@ -38,6 +38,3 @@ keymap({ 'n', 'i', 'v' }, '<Right>', '<Nop>', opts)
 keymap({ 'n', 'i', 'v' }, '<A-h>', vim.cmd.bprevious)
 keymap({ 'n', 'i', 'v' }, '<A-l>', vim.cmd.bnext)
 keymap({ 'n', 'i', 'v' }, '<A-d>', vim.cmd.bdelete)
-
-keymap({ 'n', 'i', 'v' }, '<A-j>', '<C-e>')
-keymap({ 'n', 'i', 'v' }, '<A-k>', '<C-y>')
