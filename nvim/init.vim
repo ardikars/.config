@@ -4,6 +4,9 @@ call plug#begin()
 " Motion
 Plug 'ggandor/leap.nvim'
 
+" Scrolling animation
+Plug 'karb94/neoscroll.nvim'
+
 " Show Neovim status
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
