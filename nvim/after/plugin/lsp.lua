@@ -8,7 +8,7 @@ require("mason").setup({
   }
 })
 
-local servers = { 'lua_ls', 'clangd', 'rust_analyzer' }
+local servers = { 'lua_ls', 'clangd', 'rust_analyzer', 'pyright' }
 
 require("mason-lspconfig").setup {
   ensure_installed = servers,
@@ -60,5 +60,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-local keymap = vim.keymap.set
-keymap('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true, buffer = bufnr })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, silent = true, buffer = bufnr })

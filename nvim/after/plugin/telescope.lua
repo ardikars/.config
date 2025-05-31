@@ -37,7 +37,7 @@ local opts = { noremap = true, silent = true }
 keymap('n', 'gd', builtin.lsp_definitions, vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
 keymap('n', 'gr', builtin.lsp_references, vim.tbl_extend('force', opts, { desc = 'Find references (Telescope)' }))
 
-keymap({ 'n' }, '<Leader>f', function()
+keymap({ 'n' }, '<Leader>ff', function()
   builtin.find_files({
     hidden = true,
     file_ignore_patterns = {
@@ -58,7 +58,7 @@ keymap({ 'n' }, '<Leader>f', function()
   })
 end)
 
-keymap({ 'n' }, '<Leader>g', function()
+keymap({ 'n' }, '<Leader>fg', function()
   builtin.live_grep({
     hidden = true,
     file_ignore_patterns = {
