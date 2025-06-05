@@ -1,11 +1,22 @@
 return {
     "nvim-neotest/neotest",
     dependencies = {
-        "nvim-neotest/nvim-nio",
-        "nvim-lua/plenary.nvim",
-        "antoinemadec/FixCursorHold.nvim",
-        "nvim-treesitter/nvim-treesitter",
-        "rouge8/neotest-rust", -- Rust (require cargo-nextest)
+        {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        {
+            "rouge8/neotest-rust", -- Rust (require cargo-nextest)
+        },
+        {
+            "rcasia/neotest-java",
+            ft = "java",
+            dependencies = {
+                "mfussenegger/nvim-jdtls",
+            },
+        },
     },
     config = function()
         local neotest = require("neotest")
@@ -17,6 +28,9 @@ return {
             adapters = {
                 require("neotest-rust") {
                     args = { "--no-capture" },
+                },
+                require("neotest-java") {
+                    --
                 }
             }
         }
