@@ -1,8 +1,8 @@
 return {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-        ensure_installed = { "lua_ls", "rust_analyzer" },
-        automatic_enable = false,
+        ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "jdtls" },
+        automatic_enable = true,
     },
     dependencies = {
         {
