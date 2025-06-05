@@ -7,34 +7,35 @@ return {
         local builtin = require('telescope.builtin')
         local actions = require('telescope.actions')
 
+        local layout_config = {
+            preview_cutoff = 1, -- Always show preview
+            mirror = false,
+            height = 0.9,
+            prompt_position = "top",
+            preview_height = 0.5, -- 50% of height goes to preview
+        }
+
+        local keymaps = {
+            -- Disable arrow keys
+            ["<Up>"] = false,
+            ["<Down>"] = false,
+            ["<Left>"] = false,
+            ["<Right>"] = false,
+            -- Customize
+            ["<A-j>"] = actions.move_selection_next,
+            ["<A-k>"] = actions.move_selection_previous,
+            ["<A-l>"] = actions.preview_scrolling_down,
+            ["<A-h>"] = actions.preview_scrolling_up,
+        }
+
         require('telescope').setup({
             defaults = {
                 mappings = {
-                    i = {
-                        -- Disable arrow keys
-                        ["<Up>"] = false,
-                        ["<Down>"] = false,
-                        ["<Left>"] = false,
-                        ["<Right>"] = false,
-                        -- Customize
-                        ["<A-j>"] = actions.move_selection_next,
-                        ["<A-k>"] = actions.move_selection_previous,
-                        ["<A-l>"] = actions.preview_scrolling_down,
-                        ["<A-h>"] = actions.preview_scrolling_up,
-                    },
-                    n = {
-                        -- Disable arrow keys
-                        ["<Up>"] = false,
-                        ["<Down>"] = false,
-                        ["<Left>"] = false,
-                        ["<Right>"] = false,
-                        -- Customize
-                        ["<A-j>"] = actions.move_selection_next,
-                        ["<A-k>"] = actions.move_selection_previous,
-                        ["<A-l>"] = actions.preview_scrolling_down,
-                        ["<A-h>"] = actions.preview_scrolling_up,
-                    },
+                    i = keymaps,
+                    n = keymaps,
                 },
+                layout_strategy = "vertical",
+                layout_config = layout_config,
             },
         })
 
