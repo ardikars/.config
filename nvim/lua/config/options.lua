@@ -18,13 +18,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
--- 1. Set global default tab size for all files
-vim.opt.tabstop = 2       -- Default: 2 spaces per tab
-vim.opt.shiftwidth = 2    -- Default: 2 spaces for indent
-vim.opt.expandtab = false -- Use spaces instead of tab characters
-
--- 2. Override tab settings for specific filetypes
-local special_filetypes = { "python", "c", "rust" }
+local special_filetypes = { "lua", "python", "rust" }
 
 vim.api.nvim_create_augroup("FiletypeTabOverrides", { clear = true })
 

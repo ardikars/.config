@@ -1,11 +1,6 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
-vim.g.mapleader = " "
-
--- file explorer
--- keymap("n", "<Leader>l", vim.cmd.Ex, opts);
-
 -- prevent freezes/suspends (go back to terminal shell)
 keymap("n", "<C-z>", "<nop>", opts)
 
@@ -17,10 +12,9 @@ keymap('v', 'K', ":m '<-2<CR>gv=gv")
 keymap("v", "L", "w", opts)
 keymap("v", "H", "b", opts)
 
--- yanking using system clipboard
-keymap('n', '<A-y>', '\"+y', opts)
-keymap('v', '<A-y>', '\"+y', opts)
-keymap('n', '<A-Y>', '\"+Y', opts)
+-- yanking and paste using system clipboard
+keymap({'n', 'v'}, '<C-y>', '"+y', opts)
+keymap({'n', 'v'}, '<C-p>', '"+p', opts)
 
 -- back to normal mode from insert/visual mode
 keymap({ 'i', 'v' }, '<C-c>', '<Esc>', opts)
@@ -34,6 +28,11 @@ keymap({ 'n', 'i', 'v' }, '<Up>', '<Nop>', opts)
 keymap({ 'n', 'i', 'v' }, '<Down>', '<Nop>', opts)
 keymap({ 'n', 'i', 'v' }, '<Left>', '<Nop>', opts)
 keymap({ 'n', 'i', 'v' }, '<Right>', '<Nop>', opts)
+
+keymap({ 'n', 'i', 'v' }, '<C-h>', '<C-w><C-h>', opts)
+keymap({ 'n', 'i', 'v' }, '<C-l>', '<C-w><C-l>', opts)
+keymap({ 'n', 'i', 'v' }, '<C-j>', '<C-w><C-j>', opts)
+keymap({ 'n', 'i', 'v' }, '<C-k>', '<C-w><C-k>', opts)
 
 keymap({ 'n', 'i', 'v' }, '<A-h>', vim.cmd.bprevious)
 keymap({ 'n', 'i', 'v' }, '<A-l>', vim.cmd.bnext)
