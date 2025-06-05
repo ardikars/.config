@@ -17,10 +17,10 @@ return {
                         ["<Left>"] = false,
                         ["<Right>"] = false,
                         -- Customize
-                        ["<A-h>"] = actions.preview_scrolling_down,
                         ["<A-j>"] = actions.move_selection_next,
                         ["<A-k>"] = actions.move_selection_previous,
-                        ["<A-l>"] = actions.preview_scrolling_up,
+                        ["<A-l>"] = actions.preview_scrolling_down,
+                        ["<A-h>"] = actions.preview_scrolling_up,
                     },
                     n = {
                         -- Disable arrow keys
@@ -29,10 +29,10 @@ return {
                         ["<Left>"] = false,
                         ["<Right>"] = false,
                         -- Customize
-                        ["<A-h>"] = actions.preview_scrolling_down,
                         ["<A-j>"] = actions.move_selection_next,
                         ["<A-k>"] = actions.move_selection_previous,
-                        ["<A-l>"] = actions.preview_scrolling_up,
+                        ["<A-l>"] = actions.preview_scrolling_down,
+                        ["<A-h>"] = actions.preview_scrolling_up,
                     },
                 },
             },
