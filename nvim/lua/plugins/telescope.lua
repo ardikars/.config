@@ -49,6 +49,7 @@ return {
                 file_ignore_patterns = {
                     ".git/",
                     "__pycache__/",
+                    ".pytest_cache/",
                     "venv/",
                     "target/",
                     "build/",
@@ -70,6 +71,7 @@ return {
                 file_ignore_patterns = {
                     ".git/",
                     "__pycache__/",
+                    ".pytest_cache/",
                     "venv/",
                     "target/",
                     "build/",
