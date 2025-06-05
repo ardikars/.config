@@ -1,7 +1,3 @@
-local servers = { 'lua_ls', 'rust_analyzer', 'jdtls', 'pyright' }
-
-vim.lsp.enable(servers)
-
 vim.diagnostic.config({
     -- virtual_lines = true,
     virtual_text = true,
