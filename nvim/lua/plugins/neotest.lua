@@ -17,6 +17,9 @@ return {
                 "mfussenegger/nvim-jdtls",
             },
         },
+        {
+            "nvim-neotest/neotest-python",
+        }
     },
     config = function()
         local neotest = require("neotest")
@@ -31,6 +34,10 @@ return {
                 },
                 require("neotest-java") {
                     --
+                },
+                require("neotest-python") {
+                    runner = "pytest",
+                    python = ".venv/bin/python",
                 }
             }
         }

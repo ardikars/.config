@@ -1,4 +1,4 @@
-local servers = { 'lua_ls', 'rust_analyzer', 'jdtls' }
+local servers = { 'lua_ls', 'rust_analyzer', 'jdtls', 'pyright' }
 
 vim.lsp.enable(servers)
 
