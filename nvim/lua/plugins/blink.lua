@@ -5,11 +5,8 @@ return {
         opts = {
             chartoggle = { enabled = false },
             indent = { enabled = true },
-            tree = { enabled = true },
+            tree = { enabled = false },
         },
-        keys = {
-            { '<Leader>e', '<CMD>BlinkTree toggle<CR>', desc = 'Reveal current file in tree' }
-        }
     },
     {
         'saghen/blink.cmp',
