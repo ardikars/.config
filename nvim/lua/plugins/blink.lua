@@ -5,7 +5,10 @@ return {
         opts = {
             chartoggle = { enabled = false },
             indent = { enabled = true },
-            tree = { enabled = false }
+            tree = { enabled = true },
+        },
+        keys = {
+            { '<Leader>e', '<CMD>BlinkTree toggle<CR>', desc = 'Reveal current file in tree' }
         }
     },
     {
