@@ -15,9 +15,9 @@ keymap('v', 'K', ":m '<-2<CR>gv=gv")
 keymap("v", "L", "w", opts)
 keymap("v", "H", "b", opts)
 
--- yanking and paste using system clipboard
-keymap({ 'n', 'v' }, '<C-y>', '"+y', opts)
-keymap({ 'n', 'v' }, '<C-p>', '"+p', opts)
+-- same as terminal emulator keymap
+keymap({ 'n', 'v' }, '<C-S-c>', 'y', opts)
+keymap({ 'n', 'v' }, '<C-S-v>', 'p', opts)
 
 -- back to normal mode from insert/visual mode
 keymap({ 'i', 'v' }, '<C-c>', '<Esc>', opts)
@@ -39,8 +39,8 @@ keymap({ 'n', 'i', 'v' }, '<C-k>', '<C-w><C-k>', opts)
 
 keymap({ 'n', 'i', 'v' }, '<C-Left>', ':vertical resize -3<CR>', opts)
 keymap({ 'n', 'i', 'v' }, '<C-Right>', ':vertical resize +3<CR>', opts)
-keymap({ 'n', 'i', 'v' }, '<C-Down>', ':horizontal resize +3<CR>', opts)
-keymap({ 'n', 'i', 'v' }, '<C-Up>', ':horizontal resize -3<CR>', opts)
+keymap({ 'n', 'i', 'v' }, '<C-Down>', ':horizontal resize -3<CR>', opts)
+keymap({ 'n', 'i', 'v' }, '<C-Up>', ':horizontal resize +3<CR>', opts)
 
 keymap({ 'n', 'i', 'v' }, '<A-H>', vim.cmd.bprevious)
 keymap({ 'n', 'i', 'v' }, '<A-L>', vim.cmd.bnext)
