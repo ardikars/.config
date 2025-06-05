@@ -5,8 +5,6 @@ local options = {
     number = true,
     relativenumber = true,
     termguicolors = true,
-    tabstop = 2,
-    expandtab = false,
     shiftwidth = 2,
     ignorecase = true,
     smartcase = true,
@@ -19,6 +17,11 @@ local options = {
     showcmd = true,
     showmode = true,
     scrolloff = 5,
+    smarttab = true,
+    smartindent = true,
+    autoindent = true,
+    expandtab = false,
+    tabstop = 2,
 }
 
 for k, v in pairs(options) do

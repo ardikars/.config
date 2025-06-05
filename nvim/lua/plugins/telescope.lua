@@ -43,48 +43,59 @@ return {
             vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
         keymap('n', 'gr', builtin.lsp_references, vim.tbl_extend('force', opts, { desc = 'Find references (Telescope)' }))
 
+        local file_ignore_patterns = {
+            ".git/",
+            "__pycache__/",
+            ".pytest_cache/",
+            "venv/",
+            "target/",
+            "build/",
+            "node_modules/",
+            "dist/",
+            "package-lock.json",
+            "%.lock",
+            "%.DS_Store",
+            "%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf", "%.bmp",
+            "%.mp3", "%.wav", "%.ogg", "%.flac",
+            "%.mp4", "%.mkv", "%.avi", "%.mov", "%.webm", "%.flv",
+        }
+
         keymap({ 'n' }, '<Leader>ff', function()
             builtin.find_files({
                 hidden = true,
-                file_ignore_patterns = {
-                    ".git/",
-                    "__pycache__/",
-                    ".pytest_cache/",
-                    "venv/",
-                    "target/",
-                    "build/",
-                    "node_modules/",
-                    "dist/",
-                    "package-lock.json",
-                    "%.lock",
-                    "%.DS_Store",
-                    "%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf", "%.bmp",
-                    "%.mp3", "%.wav", "%.ogg", "%.flac",
-                    "%.mp4", "%.mkv", "%.avi", "%.mov", "%.webm", "%.flv",
-                }
+                file_ignore_patterns = file_ignore_patterns
             })
+        end)
+
+        keymap({ 'n' }, '<Leader>fff', function()
+            vim.ui.input({ prompt = "Directory: ", completion = "dir" }, function(dir)
+                if dir and dir ~= "" then
+                    builtin.find_files({
+                        cwd = dir,
+                        hidden = true,
+                        file_ignore_patterns = file_ignore_patterns
+                    })
+                end
+            end)
         end)
 
         keymap({ 'n' }, '<Leader>fg', function()
             builtin.live_grep({
                 hidden = true,
-                file_ignore_patterns = {
-                    ".git/",
-                    "__pycache__/",
-                    ".pytest_cache/",
-                    "venv/",
-                    "target/",
-                    "build/",
-                    "node_modules/",
-                    "dist/",
-                    "package-lock.json",
-                    "%.lock",
-                    "%.DS_Store",
-                    "%.jpg", "%.jpeg", "%.png", "%.svg", "%.otf", "%.ttf", "%.bmp",
-                    "%.mp3", "%.wav", "%.ogg", "%.flac",
-                    "%.mp4", "%.mkv", "%.avi", "%.mov", "%.webm", "%.flv",
-                }
+                file_ignore_patterns = file_ignore_patterns
             })
+        end)
+
+        keymap({ 'n' }, '<Leader>fgg', function()
+            vim.ui.input({ prompt = "Directory: ", completion = "dir" }, function(dir)
+                if dir and dir ~= "" then
+                    builtin.live_grep({
+                        cwd = dir,
+                        hidden = true,
+                        file_ignore_patterns = file_ignore_patterns
+                    })
+                end
+            end)
         end)
     end
 }
