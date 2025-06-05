@@ -99,6 +99,16 @@ config.keys = {
         mods = "CTRL|SHIFT",
         action = wezterm.action.ActivatePaneDirection "Down",
     },
+    {
+        key = "+",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.IncreaseFontSize,
+    },
+    {
+        key = "_",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.DecreaseFontSize,
+    },
 }
 
 return config
