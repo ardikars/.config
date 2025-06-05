@@ -4,6 +4,9 @@ local keymap = vim.keymap.set
 -- prevent freezes/suspends (go back to terminal shell)
 keymap("n", "<C-z>", "<nop>", opts)
 
+-- rename word with same name
+keymap('v', '<Leader>rn', '"hy:%s/<C-r>h//g<left><left>', opts)
+
 -- moving multiple line up and down
 keymap('v', 'J', ":m '>+1<CR>gv=gv")
 keymap('v', 'K', ":m '<-2<CR>gv=gv")
@@ -13,8 +16,8 @@ keymap("v", "L", "w", opts)
 keymap("v", "H", "b", opts)
 
 -- yanking and paste using system clipboard
-keymap({'n', 'v'}, '<C-y>', '"+y', opts)
-keymap({'n', 'v'}, '<C-p>', '"+p', opts)
+keymap({ 'n', 'v' }, '<C-y>', '"+y', opts)
+keymap({ 'n', 'v' }, '<C-p>', '"+p', opts)
 
 -- back to normal mode from insert/visual mode
 keymap({ 'i', 'v' }, '<C-c>', '<Esc>', opts)

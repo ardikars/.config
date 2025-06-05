@@ -22,3 +22,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
     end,
 })
+
+vim.api.nvim_create_augroup("FiletypeTabOverrides", { clear = true })
+for _, ft in ipairs({ "lua", "python", "rust" }) do
+    vim.api.nvim_create_autocmd("FileType", {
+        group = "FiletypeTabOverrides",
+        pattern = ft,
+        callback = function()
+            vim.opt_local.tabstop = 4
+            vim.opt_local.shiftwidth = 4
+            vim.opt_local.expandtab = true
+        end,
+    })
+end
