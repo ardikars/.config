@@ -4,8 +4,11 @@ local config = wezterm.config_builder()
 
 config.audible_bell = 'Disabled'
 
+config.font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = false })
 config.font_size = 15
 config.line_height = 1.0
+
+config.color_scheme = 'JetBrains Darcula'
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "NONE"

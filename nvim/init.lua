@@ -28,6 +28,6 @@ require("lazy").setup({
     spec = {
         { import = "plugins" },
     },
-    install = { colorscheme = { "kanagawa" } },
+    install = { colorscheme = { "darcula-dark" } },
     checker = { enabled = true },
 })
