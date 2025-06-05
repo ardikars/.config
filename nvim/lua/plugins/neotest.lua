@@ -13,13 +13,13 @@ return {
         local opts = { noremap = true, silent = true }
         local keymap = vim.keymap.set
 
-        require("neotest").setup({
+        require("neotest").setup {
             adapters = {
                 require("neotest-rust") {
                     args = { "--no-capture" },
                 }
             }
-        })
+        }
 
         keymap('n', '<Leader>t', function()
             neotest.run.run()
