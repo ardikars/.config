@@ -42,7 +42,12 @@ return {
         local opts = { noremap = true, silent = true }
         keymap('n', 'gd', builtin.lsp_definitions,
             vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
+        keymap('n', 'gi', builtin.lsp_implementations,
+            vim.tbl_extend('force', opts, { desc = 'List implementations (Telescope)' }))
+        keymap('n', 'gs', builtin.spell_suggest,
+            vim.tbl_extend('force', opts, { desc = 'Spell suggestions (Telescope)' }))
         keymap('n', 'gr', builtin.lsp_references, vim.tbl_extend('force', opts, { desc = 'Find references (Telescope)' }))
+        keymap('n', '<Leader>e', builtin.diagnostics, vim.tbl_extend('force', opts, { desc = 'LSP Diagnostics' }))
 
         local file_ignore_patterns = {
             ".git/",

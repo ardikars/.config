@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- Auto-format code after saving
         local client = vim.lsp.get_client_by_id(args.data.client_id)
         if not client then return end
-        if client.supports_method('textDocument/formatting') then
+        if client.server_capabilities.documentFormattingProvider then
             vim.api.nvim_create_autocmd('BufWritePre', {
                 buffer = args.buf,
                 callback = function()
@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_augroup("FiletypeTabOverrides", { clear = true })
-for _, ft in ipairs({ "lua", "python", "rust" }) do
+for _, ft in ipairs({ "lua", "python", "rust", "java" }) do
     vim.api.nvim_create_autocmd("FileType", {
         group = "FiletypeTabOverrides",
         pattern = ft,

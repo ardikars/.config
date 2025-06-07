@@ -4,9 +4,6 @@ local keymap = vim.keymap.set
 -- prevent freezes/suspends (go back to terminal shell)
 keymap("n", "<C-z>", "<nop>", opts)
 
--- rename word with same name
-keymap('v', '<Leader>rn', '"hy:%s/<C-r>h//g<left><left>', opts)
-
 -- moving multiple line up and down
 keymap('v', 'J', ":m '>+1<CR>gv=gv")
 keymap('v', 'K', ":m '<-2<CR>gv=gv")
