@@ -19,7 +19,7 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set('n', '<leader>E', function()
-    vim.diagnostic.open_float(
+    local bufnr, winid = vim.diagnostic.open_float(
         {
             border = "rounded",
             scope = "line",
@@ -28,4 +28,7 @@ vim.keymap.set('n', '<leader>E', function()
             source = true,
         }
     )
+    if winid then
+        vim.api.nvim_set_current_win(winid)
+    end
 end, { desc = "Show diagnostics in a float" })
