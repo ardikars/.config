@@ -1,13 +1,9 @@
 vim.diagnostic.config({
     -- virtual_lines = true,
-    virtual_text = true,
+    -- virtual_text = true,
     underline = true,
     update_in_insert = false,
     severity_sort = true,
-    float = {
-        border = "rounded",
-        source = true,
-    },
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = "󰅚 ",
@@ -21,3 +17,15 @@ vim.diagnostic.config({
         },
     },
 })
+
+vim.keymap.set('n', '<leader>E', function()
+    vim.diagnostic.open_float(
+        {
+            border = "rounded",
+            scope = "line",
+            severity_sort = true,
+            focusable = true,
+            source = true,
+        }
+    )
+end, { desc = "Show diagnostics in a float" })
