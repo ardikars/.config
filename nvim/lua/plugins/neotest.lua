@@ -42,11 +42,11 @@ return {
             }
         }
 
-        keymap('n', '<Leader>t', function()
+        keymap('n', '<Leader>tt', function()
             neotest.run.run()
         end, opts)
 
-        keymap('n', '<Leader>tt', function()
+        keymap('n', '<Leader>to', function()
             neotest.output.open({ enter = true, auto_close = true })
         end, opts)
 
