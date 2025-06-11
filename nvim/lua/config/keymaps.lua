@@ -39,6 +39,18 @@ keymap({ 'n', 'i', 'v' }, '<C-Right>', ':vertical resize +3<CR>', opts)
 keymap({ 'n', 'i', 'v' }, '<C-Down>', ':horizontal resize -3<CR>', opts)
 keymap({ 'n', 'i', 'v' }, '<C-Up>', ':horizontal resize +3<CR>', opts)
 
-keymap({ 'n', 'i', 'v' }, '<A-H>', vim.cmd.bprevious)
-keymap({ 'n', 'i', 'v' }, '<A-L>', vim.cmd.bnext)
-keymap({ 'n', 'i', 'v' }, '<A-D>', vim.cmd.bdelete)
+keymap({ 'n', 'i', 'v' }, '<A-H>', vim.cmd.bprevious, opts)
+keymap({ 'n', 'i', 'v' }, '<A-L>', vim.cmd.bnext, opts)
+
+keymap({ 'n', 'v' }, 'q', function()
+    local no_floating_windows = true
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local config = vim.api.nvim_win_get_config(win)
+        if config.relative ~= "" then
+            no_floating_windows = false
+        end
+    end
+    if no_floating_windows then
+        vim.api.nvim_buf_delete(0, { force = false })
+    end
+end, opts)
