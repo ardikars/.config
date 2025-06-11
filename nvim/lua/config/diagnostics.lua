@@ -30,5 +30,9 @@ vim.keymap.set('n', '<leader>E', function()
     )
     if winid then
         vim.api.nvim_set_current_win(winid)
+        -- Set a buffer-local keymap
+        vim.keymap.set('n', 'q', function()
+            vim.api.nvim_win_close(winid, true)
+        end, { buffer = bufnr, nowait = true, noremap = true, silent = true })
     end
 end, { desc = "Show diagnostics in a float" })
