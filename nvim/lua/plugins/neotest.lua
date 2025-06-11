@@ -46,18 +46,8 @@ return {
             neotest.run.run()
         end, opts)
 
-        keymap('n', '<Leader>to', function()
-            neotest.output_panel.open()
-        end, opts)
-
-        keymap('n', '<Leader>too', function()
-            neotest.output_panel.close()
-        end, opts)
-
-        keymap('n', '<Leader>tc', function()
-            if neotest.output_panel then
-                neotest.output_panel.clear()
-            end
+        keymap('n', '<Leader>tt', function()
+            neotest.output.open({ enter = true, auto_close = true })
         end, opts)
 
         keymap('n', '<Leader>ts', function()
