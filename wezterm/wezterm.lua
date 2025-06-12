@@ -100,6 +100,11 @@ config.keys = {
         action = wezterm.action.ActivatePaneDirection "Down",
     },
     {
+        key = "t",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.SpawnWindow,
+    },
+    {
         key = "+",
         mods = "CTRL|SHIFT",
         action = wezterm.action.IncreaseFontSize,
