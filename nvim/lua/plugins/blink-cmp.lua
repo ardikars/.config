@@ -6,7 +6,6 @@ return {
             lazy = false,
             opts = {
                 chartoggle = { enabled = false },
-                indent = { enabled = true },
                 tree = { enabled = false },
             },
         },
