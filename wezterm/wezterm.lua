@@ -20,7 +20,7 @@ config.window_padding = {
     bottom = 0,
 }
 
--- config.default_prog = { '/usr/bin/fish', '-l' }
+config.default_prog = { '/usr/bin/fish', '-l' }
 
 config.disable_default_key_bindings = true
 config.keys = {

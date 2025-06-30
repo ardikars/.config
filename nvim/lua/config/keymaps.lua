@@ -4,6 +4,12 @@ local keymap = vim.keymap.set
 -- prevent freezes/suspends (go back to terminal shell)
 keymap("n", "<C-z>", "<nop>", opts)
 
+-- Remap 'd' in normal and visual mode to not yank (delete to black hole register)
+vim.keymap.set('n', 'd', '"_d', opts)
+vim.keymap.set('v', 'd', '"_d', opts)
+-- In visual mode, paste without yanking the replaced text
+vim.keymap.set('v', 'p', '"_dP', opts)
+
 -- moving multiple line up and down
 keymap('v', 'J', ":m '>+1<CR>gv=gv")
 keymap('v', 'K', ":m '<-2<CR>gv=gv")
