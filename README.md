@@ -17,6 +17,10 @@
 ```bash
 # dnf install neovim
 ```
+```bash
+# For system clipboard supports
+# dnf install wl-clipboard
+```
 
 ### Use `tmux` for every new terminal session
 
