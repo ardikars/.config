@@ -20,6 +20,8 @@
 ```bash
 # For system clipboard supports
 # dnf install wl-clipboard
+# Or
+# dnf install xclip
 ```
 
 ### Use `tmux` for every new terminal session

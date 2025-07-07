@@ -20,7 +20,7 @@ config.window_padding = {
     bottom = 0,
 }
 
-config.default_prog = { '/usr/bin/fish', '-l' }
+-- config.default_prog = { '/usr/bin/fish', '-l' }
 
 config.disable_default_key_bindings = true
 config.keys = {
@@ -34,11 +34,11 @@ config.keys = {
         mods = "CTRL|SHIFT",
         action = wezterm.action.CloseCurrentTab { confirm = true },
     },
-    {
-        key = "B",
-        mods = "CTRL|SHIFT",
-        action = wezterm.action.ActivateCopyMode,
-    },
+    --{
+    --    key = "B",
+    --    mods = "CTRL|SHIFT",
+    --    action = wezterm.action.ActivateCopyMode,
+    --},
     {
         key = "C",
         mods = "CTRL|SHIFT",
