@@ -34,11 +34,11 @@ config.keys = {
         mods = "CTRL|SHIFT",
         action = wezterm.action.CloseCurrentTab { confirm = true },
     },
-    --{
-    --    key = "B",
-    --    mods = "CTRL|SHIFT",
-    --    action = wezterm.action.ActivateCopyMode,
-    --},
+    {
+        key = "A",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivateCopyMode,
+    },
     {
         key = "C",
         mods = "CTRL|SHIFT",
