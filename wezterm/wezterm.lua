@@ -1,5 +1,12 @@
 local wezterm = require 'wezterm'
 
+local mux = wezterm.mux
+
+wezterm.on('gui-startup', function(cmd)
+    local _, _, window = mux.spawn_window(cmd or {})
+    window:gui_window():toggle_fullscreen()
+end)
+
 local config = wezterm.config_builder()
 
 config.audible_bell = 'Disabled'
