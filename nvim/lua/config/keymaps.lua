@@ -48,6 +48,7 @@ keymap({ 'n', 'i', 'v' }, '<C-Up>', ':horizontal resize +3<CR>', opts)
 keymap({ 'n', 'i', 'v' }, '<A-H>', vim.cmd.bprevious, opts)
 keymap({ 'n', 'i', 'v' }, '<A-L>', vim.cmd.bnext, opts)
 keymap({ 'n', 'i', 'v' }, '<A-D>', vim.cmd.bdelete, opts)
+keymap({ 'n', 'i', 'v' }, '<A-Q>', function() vim.cmd.bdelete({ bang = true }) end, opts)
 
 keymap({ 'n', 'v' }, 'q', function()
     for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -57,3 +58,26 @@ keymap({ 'n', 'v' }, 'q', function()
         end
     end
 end, opts)
+
+-- LSP
+keymap({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+
+-- Diagnostics
+keymap('n', '<leader>E', function()
+    local bufnr, winid = vim.diagnostic.open_float(
+        {
+            border = "rounded",
+            scope = "line",
+            severity_sort = true,
+            focusable = true,
+            source = true,
+        }
+    )
+    if winid then
+        vim.api.nvim_set_current_win(winid)
+        -- Set a buffer-local keymap
+        vim.keymap.set('n', 'q', function()
+            vim.api.nvim_win_close(winid, true)
+        end, { buffer = bufnr, nowait = true, noremap = true, silent = true })
+    end
+end, { desc = "Show diagnostics in a float" })

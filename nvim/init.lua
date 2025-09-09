@@ -29,5 +29,6 @@ require("lazy").setup({
         { import = "plugins" },
     },
     install = { colorscheme = { "darcula-dark" } },
-    checker = { enabled = true },
+    -- automatically check for plugin updates
+    checker = { enabled = false },
 })
