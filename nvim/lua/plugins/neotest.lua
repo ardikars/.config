@@ -10,16 +10,6 @@ return {
         {
             "rouge8/neotest-rust", -- Rust (require cargo-nextest)
         },
-        {
-            "rcasia/neotest-java",
-            ft = "java",
-            dependencies = {
-                "mfussenegger/nvim-jdtls",
-            },
-        },
-        {
-            "nvim-neotest/neotest-python",
-        }
     },
     config = function()
         local neotest = require("neotest")
@@ -32,13 +22,6 @@ return {
                 require("neotest-rust") {
                     args = { "--no-capture" },
                 },
-                require("neotest-java") {
-                    --
-                },
-                require("neotest-python") {
-                    runner = "pytest",
-                    python = ".venv/bin/python",
-                }
             }
         }
 
