@@ -12,7 +12,7 @@
 # dnf install tmux
 ```
 
-### Install Neovim (Require Neovim 0.11.+: https://neovim.io/)
+### Install Neovim (Require Neovim 0.12.+: https://neovim.io/)
 
 ```bash
 # dnf install neovim
