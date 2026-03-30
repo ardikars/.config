@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_augroup("FiletypeTabOverrides", { clear = true })
-for _, ft in ipairs({ "lua", "rust" }) do
+for _, ft in ipairs({ "lua", "rust", "java", "go" }) do
     vim.api.nvim_create_autocmd("FileType", {
         group = "FiletypeTabOverrides",
         pattern = ft,
