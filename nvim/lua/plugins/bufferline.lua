@@ -1,13 +1,8 @@
-return {
-    'akinsho/bufferline.nvim',
-    tag = 'v4.9.1',
-    pin = true,
-    submodules = true,
-    module = false,
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-        require("bufferline").setup {}
-    end
-}
+vim.pack.add({
+	{
+		src = 'https://github.com/akinsho/bufferline.nvim',
+		version = 'v4.9.1'
+	},
+})
+
+require('bufferline').setup {}

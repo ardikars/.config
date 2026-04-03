@@ -2,7 +2,7 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
 -- prevent freezes/suspends (go back to terminal shell)
-keymap("n", "<C-z>", "<nop>", opts)
+keymap('n', '<C-z>', '<nop>', opts)
 
 -- Remap 'd' in normal and visual mode to not yank (delete to black hole register)
 vim.keymap.set('n', 'd', '"_d', opts)
@@ -15,8 +15,8 @@ keymap('v', 'J', ":m '>+1<CR>gv=gv")
 keymap('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- moving cursor
-keymap("v", "L", "w", opts)
-keymap("v", "H", "b", opts)
+keymap('v', 'L', 'w', opts)
+keymap('v', 'H', 'b', opts)
 
 -- same as terminal emulator keymap
 keymap({ 'n', 'v' }, '<C-S-c>', 'y', opts)
@@ -53,31 +53,9 @@ keymap({ 'n', 'i', 'v' }, '<A-Q>', function() vim.cmd.bdelete({ bang = true }) e
 keymap({ 'n', 'v' }, 'q', function()
     for _, win in ipairs(vim.api.nvim_list_wins()) do
         local config = vim.api.nvim_win_get_config(win)
-        if config.relative ~= "" then
+        if config.relative ~= '' then
             vim.api.nvim_win_close(win, true)
         end
     end
 end, opts)
 
--- LSP
-keymap({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
-
--- Diagnostics
-keymap('n', '<leader>E', function()
-    local bufnr, winid = vim.diagnostic.open_float(
-        {
-            border = "rounded",
-            scope = "line",
-            severity_sort = true,
-            focusable = true,
-            source = true,
-        }
-    )
-    if winid then
-        vim.api.nvim_set_current_win(winid)
-        -- Set a buffer-local keymap
-        vim.keymap.set('n', 'q', function()
-            vim.api.nvim_win_close(winid, true)
-        end, { buffer = bufnr, nowait = true, noremap = true, silent = true })
-    end
-end, { desc = "Show diagnostics in a float" })

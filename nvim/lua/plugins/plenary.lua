@@ -1,7 +1,6 @@
-return {
-    "nvim-lua/plenary.nvim",
-    commit = 'b9fd5226c2f76c951fc8ed5923d85e4de065e509',
-    pin = true,
-    submodules = true,
-    module = false,
-}
+vim.pack.add({
+	{
+		src = 'https://github.com/nvim-lua/plenary.nvim',
+		version = 'b9fd5226c2f76c951fc8ed5923d85e4de065e509'
+	},
+})

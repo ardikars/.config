@@ -1,0 +1,94 @@
+{
+  "plugins": {
+    "bufferline.nvim": {
+      "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
+      "src": "https://github.com/akinsho/bufferline.nvim",
+      "version": "'v4.9.1'"
+    },
+    "darcula-dark.nvim": {
+      "rev": "285c1fe3225ef19ef2639a3080551ee9669f263b",
+      "src": "https://github.com/xiantang/darcula-dark.nvim",
+      "version": "'285c1fe3225ef19ef2639a3080551ee9669f263b'"
+    },
+    "gitsigns.nvim": {
+      "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
+      "src": "https://github.com/lewis6991/gitsigns.nvim",
+      "version": "'v2.1.0'"
+    },
+    "indent-blankline.nvim": {
+      "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
+      "src": "https://github.com/lukas-reineke/indent-blankline.nvim",
+      "version": "'v3.9.1'"
+    },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim",
+      "version": "'47f91c416daef12db467145e16bed5bbfe00add8'"
+    },
+    "neoscroll.nvim": {
+      "rev": "c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8",
+      "src": "https://github.com/karb94/neoscroll.nvim",
+      "version": "'c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8'"
+    },
+    "nui.nvim": {
+      "rev": "f535005e6ad1016383f24e39559833759453564e",
+      "src": "https://github.com/MunifTanjim/nui.nvim",
+      "version": "'0.4.0'"
+    },
+    "nvim-dap": {
+      "rev": "6a5bba0ddea5d419a783e170c20988046376090d",
+      "src": "https://github.com/mfussenegger/nvim-dap",
+      "version": "'0.10.0'"
+    },
+    "nvim-java": {
+      "rev": "61e18c47dcf237e29c9689201bf13c0708c288bc",
+      "src": "https://github.com/nvim-java/nvim-java",
+      "version": "'v4.1.0'"
+    },
+    "nvim-lspconfig": {
+      "rev": "0203a9608d63eda57679b01e69f33a7b4c34b0d1",
+      "src": "https://github.com/neovim/nvim-lspconfig",
+      "version": "'v2.7.0'"
+    },
+    "nvim-tree.lua": {
+      "rev": "e16cd38962bc40c22a51ee004aa4f43726d74a16",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua",
+      "version": "'v1.16.0'"
+    },
+    "nvim-treesitter": {
+      "rev": "539abf6da5ee8702e37b82cc953131dadd570da2",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'539abf6da5ee8702e37b82cc953131dadd570da2'"
+    },
+    "nvim-web-devicons": {
+      "rev": "40e9d5a6cc3db11b309e39593fc7ac03bb844e38",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons",
+      "version": "'40e9d5a6cc3db11b309e39593fc7ac03bb844e38'"
+    },
+    "oil.nvim": {
+      "rev": "975a77cce3c8cb742bc1b3629f4328f5ca977dad",
+      "src": "https://github.com/stevearc/oil.nvim",
+      "version": "'v2.15.0'"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim",
+      "version": "'b9fd5226c2f76c951fc8ed5923d85e4de065e509'"
+    },
+    "rustaceanvim": {
+      "rev": "f69c85a955b9a83d495e3dc8d43adb6364a0b765",
+      "src": "https://github.com/mrcjkb/rustaceanvim",
+      "version": "'v8.0.5'"
+    },
+    "spring-boot.nvim": {
+      "rev": "218c0c26c14d99feca778e4d13f5ec3e8b1b60f0",
+      "src": "https://github.com/JavaHello/spring-boot.nvim",
+      "version": "'218c0c26c14d99feca778e4d13f5ec3e8b1b60f0'"
+    },
+    "telescope.nvim": {
+      "rev": "5255aa27c422de944791318024167ad5d40aad20",
+      "src": "https://github.com/nvim-telescope/telescope.nvim",
+      "version": "'v0.2.2'"
+    }
+  }
+}
