@@ -1,8 +1,8 @@
 vim.pack.add({
-	{
-		src = 'https://github.com/neovim/nvim-lspconfig',
-		version = 'v2.7.0',
-	},
+    {
+        src = 'https://github.com/neovim/nvim-lspconfig',
+        version = 'v2.7.0',
+    },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -11,36 +11,36 @@ vim.api.nvim_create_autocmd("LspAttach", {
         local bufnr = args.buf
         local client = vim.lsp.get_client_by_id(args.data.client_id)
 
-		vim.opt.completeopt = { "menuone", "noselect", "popup" }
-		vim.lsp.completion.enable(true, client.id, bufnr, {
-	        autotrigger = true,
-	    	convert = function(item)
-              return { abbr = item.label:gsub("%b()", "") }
-	    	end,
+        vim.opt.completeopt = { "menuone", "noselect", "popup" }
+        vim.lsp.completion.enable(true, client.id, bufnr, {
+            autotrigger = true,
+            convert = function(item)
+                return { abbr = item.label:gsub("%b()", "") }
+            end,
         })
         vim.keymap.set("i", "<C-space>", vim.lsp.completion.get, { desc = "trigger autocompletion" })
         vim.keymap.set("i", "<A-j>", function()
-          if vim.fn.pumvisible() == 1 then
-            return "<C-n>"
-          else
-            return "<C-x><C-o>" -- trigger omni completion (LSP)
-          end
+            if vim.fn.pumvisible() == 1 then
+                return "<C-n>"
+            else
+                return "<C-x><C-o>" -- trigger omni completion (LSP)
+            end
         end, { expr = true })
         vim.keymap.set("i", "<A-k>", function()
-          if vim.fn.pumvisible() == 1 then
-            return "<C-p>"
-          else
-            return "<C-p>"
-          end
+            if vim.fn.pumvisible() == 1 then
+                return "<C-p>"
+            else
+                return "<C-p>"
+            end
         end, { expr = true })
 
-		vim.keymap.set("i", "<CR>", function()
-    	  if vim.fn.pumvisible() == 1 then
-    	    return "<C-y>"
-    	  else
-    	    return "<CR>"
-    	  end
-    	end, { expr = true, buffer = bufnr })
+        vim.keymap.set("i", "<CR>", function()
+            if vim.fn.pumvisible() == 1 then
+                return "<C-y>"
+            else
+                return "<CR>"
+            end
+        end, { expr = true, buffer = bufnr })
 
         vim.diagnostic.config({
             -- virtual_lines = true,
@@ -92,7 +92,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
             vim.api.nvim_create_autocmd('BufWritePre', {
                 buffer = args.buf,
                 callback = function()
-                    vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+                    vim.lsp.buf.format({ bufnr = args.buf, id = client.id, async = false })
                 end,
             })
         end

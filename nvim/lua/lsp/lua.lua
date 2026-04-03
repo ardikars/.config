@@ -1,10 +1,13 @@
+local lua_ls_path = vim.fn.expand("~/.local/opt/lua-ls/bin/lua-language-server")
+
 local config = {
-  ---@type lspconfig.settings.lua_ls
+  cmd = { lua_ls_path },
   settings = {
     Lua = {
       runtime = {
         version = 'LuaJIT',
       },
+      telemetry = { enable = false },
       workspace = {
         preloadFileSize = 10000,
         library = {
@@ -16,3 +19,5 @@ local config = {
 }
 
 vim.lsp.config('lua_ls', config)
+vim.lsp.enable('lua_ls')
+
