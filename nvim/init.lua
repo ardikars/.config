@@ -27,6 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         { import = "plugins" },
+        { import = "ide-plugins" },
     },
     install = { colorscheme = { "darcula-dark" } },
     -- automatically check for plugin updates

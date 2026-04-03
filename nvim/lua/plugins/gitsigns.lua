@@ -1,5 +1,9 @@
 return {
     "lewis6991/gitsigns.nvim",
+    tag = 'v2.1.0',
+    pin = true,
+    submodules = true,
+    module = false,
     config = function()
         require('gitsigns').setup {
             signs                        = {

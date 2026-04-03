@@ -34,4 +34,4 @@ for _, ft in ipairs({ "lua", "rust", "java", "go" }) do
             vim.opt_local.expandtab = true
         end,
     })
-end
+end 

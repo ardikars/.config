@@ -1,5 +1,9 @@
 return {
     'karb94/neoscroll.nvim',
+    commit = 'c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8',
+    pin = true,
+    submodules = true,
+    module = false,
     config = function()
         local neoscroll = require('neoscroll')
         local keymap = {
