@@ -15,6 +15,14 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim",
       "version": "'v2.1.0'"
     },
+    "go.nvim": {
+      "rev": "ecffa1757ac8e84e1e128f12e0fdbf8418354f6f",
+      "src": "https://github.com/ray-x/go.nvim"
+    },
+    "guihua.lua": {
+      "rev": "c4f1b5ee1a66dbcef0b2c5ee26e42b9757684f61",
+      "src": "https://github.com/ray-x/guihua.lua"
+    },
     "indent-blankline.nvim": {
       "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim",
