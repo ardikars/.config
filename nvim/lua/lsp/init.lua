@@ -45,48 +45,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
             end
         end, { expr = true, buffer = bufnr })
 
-        vim.diagnostic.config({
-            -- virtual_lines = true,
-            -- virtual_text = true,
-            underline = true,
-            update_in_insert = false,
-            severity_sort = true,
-            signs = {
-                text = {
-                    [vim.diagnostic.severity.ERROR] = '󰅚 ',
-                    [vim.diagnostic.severity.WARN] = '󰀪 ',
-                    [vim.diagnostic.severity.INFO] = '󰋽 ',
-                    [vim.diagnostic.severity.HINT] = '󰌶 ',
-                },
-                numhl = {
-                    [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
-                    [vim.diagnostic.severity.WARN] = 'WarningMsg',
-                },
-            },
-        })
-
         -- Code action
         vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action)
-
-        -- Diagnostics
-        vim.keymap.set('n', '<leader>E', function()
-            local bufnr0, winid = vim.diagnostic.open_float(
-                {
-                    border = 'rounded',
-                    scope = 'line',
-                    severity_sort = true,
-                    focusable = true,
-                    source = true,
-                }
-            )
-            if winid then
-                vim.api.nvim_set_current_win(winid)
-                -- Set a buffer-local keymap
-                vim.keymap.set('n', 'q', function()
-                    vim.api.nvim_win_close(winid, true)
-                end, { buffer = bufnr0, nowait = true, noremap = true, silent = true })
-            end
-        end, { desc = 'Show diagnostics in a float' })
 
         -- Auto-format code after saving
         if client.server_capabilities.documentFormattingProvider then

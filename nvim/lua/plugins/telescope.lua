@@ -1,8 +1,8 @@
 vim.pack.add({
-	{
-		src = 'https://github.com/nvim-telescope/telescope.nvim',
-		version = 'v0.2.2'
-	},
+    {
+        src = 'https://github.com/nvim-telescope/telescope.nvim',
+        version = 'v0.2.2'
+    },
 })
 
 local keymap = vim.keymap.set
@@ -46,10 +46,55 @@ keymap('n', 'gd', builtin.lsp_definitions,
     vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
 keymap('n', 'gi', builtin.lsp_implementations,
     vim.tbl_extend('force', opts, { desc = 'List implementations (Telescope)' }))
-keymap('n', 'gs', builtin.spell_suggest,
+keymap('n', 'gl', builtin.spell_suggest,
     vim.tbl_extend('force', opts, { desc = 'Spell suggestions (Telescope)' }))
 keymap('n', 'gr', builtin.lsp_references, vim.tbl_extend('force', opts, { desc = 'Find references (Telescope)' }))
 keymap('n', '<Leader>e', builtin.diagnostics, vim.tbl_extend('force', opts, { desc = 'LSP Diagnostics' }))
+keymap('n', '<Leader>gs', builtin.lsp_document_symbols, vim.tbl_extend('force', opts, { desc = 'LSP document symbols' }))
+keymap('n', '<Leader>gss', builtin.lsp_workspace_symbols,
+    vim.tbl_extend('force', opts, { desc = 'LSP workspace symbols' }))
+keymap('n', '<Leader>gtd', builtin.lsp_type_definitions, vim.tbl_extend('force', opts, { desc = 'LSP type definitions' }))
+
+vim.diagnostic.config({
+    -- virtual_lines = true,
+    -- virtual_text = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = '󰅚 ',
+            [vim.diagnostic.severity.WARN] = '󰀪 ',
+            [vim.diagnostic.severity.INFO] = '󰋽 ',
+            [vim.diagnostic.severity.HINT] = '󰌶 ',
+        },
+        numhl = {
+            [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+            [vim.diagnostic.severity.WARN] = 'WarningMsg',
+        },
+    },
+})
+
+-- Diagnostics
+vim.keymap.set('n', '<leader>E', function()
+    local bufnr0, winid = vim.diagnostic.open_float(
+        {
+            border = 'rounded',
+            scope = 'line',
+            severity_sort = true,
+            focusable = true,
+            source = true,
+        }
+    )
+    if winid then
+        vim.api.nvim_set_current_win(winid)
+        -- Set a buffer-local keymap
+        vim.keymap.set('n', 'q', function()
+            vim.api.nvim_win_close(winid, true)
+        end, { buffer = bufnr0, nowait = true, noremap = true, silent = true })
+    end
+end, { desc = 'Show diagnostics in a float' })
+
 
 local file_ignore_patterns = {
     '.git/',
