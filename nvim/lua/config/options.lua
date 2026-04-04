@@ -22,6 +22,7 @@ local options = {
     autoindent = true,
     expandtab = false,
     tabstop = 2,
+    shada = '', -- stop marks from persisting
 }
 
 for k, v in pairs(options) do

@@ -39,6 +39,11 @@ require('telescope').setup({
         layout_strategy = 'vertical',
         layout_config = layout_config,
     },
+    pickers = {
+        marks = {
+            marks = { "a-z", "A-Z" }, -- only show user marks
+        },
+    },
 })
 
 local opts = { noremap = true, silent = true }
@@ -54,6 +59,7 @@ keymap('n', '<Leader>gs', builtin.lsp_document_symbols, vim.tbl_extend('force', 
 keymap('n', '<Leader>gss', builtin.lsp_workspace_symbols,
     vim.tbl_extend('force', opts, { desc = 'LSP workspace symbols' }))
 keymap('n', '<Leader>gtd', builtin.lsp_type_definitions, vim.tbl_extend('force', opts, { desc = 'LSP type definitions' }))
+keymap('n', '<Leader>m', builtin.marks, vim.tbl_extend('force', opts, { desc = 'List marks' }))
 
 vim.diagnostic.config({
     -- virtual_lines = true,
