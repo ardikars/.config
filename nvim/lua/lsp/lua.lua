@@ -1,7 +1,7 @@
-local lua_ls_path = vim.fn.expand('~/.local/opt/lua-ls/bin/lua-language-server')
+-- local lua_ls_path = vim.fn.expand('~/.local/opt/lua-ls/bin/lua-language-server')
 
 local config = {
-    cmd = { lua_ls_path },
+    -- cmd = { lua_ls_path },
     settings = {
         Lua = {
             runtime = {

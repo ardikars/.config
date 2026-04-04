@@ -16,6 +16,7 @@ vim.pack.add({
         version = 'v4.1.0',
     }
 })
+
 require('java').setup({
     -- Startup checks
     checks = {

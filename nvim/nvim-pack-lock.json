@@ -10,18 +10,19 @@
       "src": "https://github.com/xiantang/darcula-dark.nvim",
       "version": "'285c1fe3225ef19ef2639a3080551ee9669f263b'"
     },
+    "fine-cmdline.nvim": {
+      "rev": "6e646f4da6afe856e36f3d952489b723d1475638",
+      "src": "https://github.com/VonHeikemen/fine-cmdline.nvim",
+      "version": "'6e646f4da6afe856e36f3d952489b723d1475638'"
+    },
     "gitsigns.nvim": {
       "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
       "src": "https://github.com/lewis6991/gitsigns.nvim",
       "version": "'v2.1.0'"
     },
     "go.nvim": {
-      "rev": "ecffa1757ac8e84e1e128f12e0fdbf8418354f6f",
+      "rev": "3cfece46344d4f35099d3b207c7cae76da0b48d6",
       "src": "https://github.com/ray-x/go.nvim"
-    },
-    "guihua.lua": {
-      "rev": "c4f1b5ee1a66dbcef0b2c5ee26e42b9757684f61",
-      "src": "https://github.com/ray-x/guihua.lua"
     },
     "indent-blankline.nvim": {
       "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
@@ -32,6 +33,16 @@
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim",
       "version": "'47f91c416daef12db467145e16bed5bbfe00add8'"
+    },
+    "mason-lspconfig.nvim": {
+      "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim",
+      "version": "'v2.1.0'"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "https://github.com/mason-org/mason.nvim",
+      "version": "'v2.2.1'"
     },
     "neoscroll.nvim": {
       "rev": "c8d29979cb0cb3a2437a8e0ae683fd82f340d3b8",
@@ -88,6 +99,11 @@
       "src": "https://github.com/mrcjkb/rustaceanvim",
       "version": "'v8.0.5'"
     },
+    "searchbox.nvim": {
+      "rev": "ed230583c78795526b3d4585ac1460c108e26213",
+      "src": "https://github.com/VonHeikemen/searchbox.nvim",
+      "version": "'ed230583c78795526b3d4585ac1460c108e26213'"
+    },
     "spring-boot.nvim": {
       "rev": "218c0c26c14d99feca778e4d13f5ec3e8b1b60f0",
       "src": "https://github.com/JavaHello/spring-boot.nvim",
@@ -106,6 +122,11 @@
     "trouble.nvim": {
       "rev": "748ca2789044607f19786b1d837044544c55e80a",
       "src": "https://github.com/folke/trouble.nvim"
+    },
+    "vim-go": {
+      "rev": "f4b4ba17035aebcd222df90375c1cbb1dc4d8c5b",
+      "src": "https://github.com/fatih/vim-go",
+      "version": "'f4b4ba17035aebcd222df90375c1cbb1dc4d8c5b'"
     }
   }
 }

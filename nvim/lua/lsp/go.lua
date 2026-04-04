@@ -1,6 +1,8 @@
 vim.pack.add({
-  'https://github.com/ray-x/guihua.lua',
-  'https://github.com/ray-x/go.nvim',
+    {
+        src = 'https://github.com/fatih/vim-go',
+        version = 'f4b4ba17035aebcd222df90375c1cbb1dc4d8c5b',
+    }
 })
 
-require("go").setup()
+vim.lsp.enable('gopls')

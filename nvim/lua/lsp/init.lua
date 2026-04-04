@@ -3,6 +3,29 @@ vim.pack.add({
         src = 'https://github.com/neovim/nvim-lspconfig',
         version = 'v2.7.0',
     },
+    {
+        src = 'https://github.com/mason-org/mason.nvim',
+        version = 'v2.2.1',
+    },
+    {
+        src = 'https://github.com/mason-org/mason-lspconfig.nvim',
+        version = 'v2.1.0',
+    },
+})
+
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
+require("mason-lspconfig").setup({
+    ensure_installed = { "lua_ls", "gopls" },
+    automatic_enable = true,
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
