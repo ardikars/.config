@@ -1,5 +1,13 @@
 {
   "plugins": {
+    "43d8eb9dd2a1154dd8259ee3ce37cbbdb28c405c": {
+      "rev": "43d8eb9dd2a1154dd8259ee3ce37cbbdb28c405c",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
+    },
+    "9c60ec2279d62487d942ce095e49006af28eed6e": {
+      "rev": "9c60ec2279d62487d942ce095e49006af28eed6e",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
     "bufferline.nvim": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim",
@@ -78,6 +86,11 @@
       "rev": "0203a9608d63eda57679b01e69f33a7b4c34b0d1",
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": "'v2.7.0'"
+    },
+    "nvim-surround": {
+      "rev": "61319d4bd1c5e336e197defa15bd104c51f0fb29",
+      "src": "https://github.com/kylechui/nvim-surround",
+      "version": "4.0.0 - 5.0.0"
     },
     "nvim-tree.lua": {
       "rev": "e16cd38962bc40c22a51ee004aa4f43726d74a16",
