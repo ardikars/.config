@@ -30,11 +30,24 @@ config.window_padding = {
 -- config.default_prog = { '/usr/bin/fish', '-l' }
 
 config.disable_default_key_bindings = true
+
+wezterm.on('toggle-fullscreen-maximized', function(window, pane)
+    local is_full = window:get_dimensions().is_full_screen
+
+    window:toggle_fullscreen()
+
+    if is_full then
+        -- just exited fullscreen → maximize
+        wezterm.sleep_ms(50)
+        window:maximize()
+    end
+end)
+
 config.keys = {
     {
         key = "N",
         mods = "CTRL|SHIFT",
-        action = wezterm.action.ToggleFullScreen,
+        action = wezterm.action.EmitEvent("toggle-fullscreen-maximized"),
     },
     {
         key = "Q",
