@@ -30,6 +30,8 @@ local keymaps = {
     ['<A-h>'] = actions.preview_scrolling_up,
 }
 
+local function noop() end
+
 require('telescope').setup({
     defaults = {
         mappings = {
@@ -43,10 +45,19 @@ require('telescope').setup({
         marks = {
             marks = { "a-z", "A-Z" }, -- only show user marks
         },
+        git_bcommits = {
+            mappings = {
+                i = { ["<CR>"] = noop },
+                n = { ["<CR>"] = noop },
+            },
+        },
     },
 })
 
 local opts = { noremap = true, silent = true }
+
+keymap('n', 'gg', builtin.git_bcommits,
+    vim.tbl_extend('force', opts, { desc = 'Git commits history' }))
 keymap('n', 'gd', builtin.lsp_definitions,
     vim.tbl_extend('force', opts, { desc = 'Go to definition (Telescope)' }))
 keymap('n', 'gi', builtin.lsp_implementations,
