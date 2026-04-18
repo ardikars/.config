@@ -12,10 +12,10 @@
 # dnf install tmux
 ```
 
-### Install Neovim (Require Neovim 0.12.+: https://neovim.io/)
+### Install Neovim (Latest version)
 
 ```bash
-# dnf install neovim
+# nvim/instal.sh
 ```
 ```bash
 # For system clipboard supports
@@ -35,3 +35,12 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 ```
+
+### Latex
+
+```bash
+sudo dnf install latexmk zathura zathura-pdf-mupdf
+# Or
+sudo dnf install latexmk zathura zathura-pdf-poppler
+```
+
