@@ -39,8 +39,14 @@ fi
 ### Latex
 
 ```bash
-sudo dnf install latexmk zathura zathura-pdf-mupdf
+# dnf install latexmk zathura zathura-pdf-mupdf
 # Or
-sudo dnf install latexmk zathura zathura-pdf-poppler
+# dnf install latexmk zathura zathura-pdf-poppler
 ```
 
+### Random Quotes/Jokes
+
+```bash
+# dnf install fortune 
+# dnf install cowsay
+```
