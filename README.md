@@ -27,12 +27,12 @@
 ### Use `tmux` for every new terminal session
 
 ```bash
-# nvim ~/.bashrc
+# nvim /etc/profile.d/terminal.sh
 ```
 
 ```text
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default
 fi
 ```
 
