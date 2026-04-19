@@ -28,6 +28,8 @@ local keymaps = {
     ['<A-k>'] = actions.move_selection_previous,
     ['<A-l>'] = actions.preview_scrolling_down,
     ['<A-h>'] = actions.preview_scrolling_up,
+    ['<A-L>'] = actions.preview_scrolling_right,
+    ['<A-H>'] = actions.preview_scrolling_left,
 }
 
 local function noop() end
