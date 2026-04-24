@@ -1,8 +1,8 @@
 vim.pack.add({
-	{
-		src = 'https://github.com/lewis6991/gitsigns.nvim',
-		version = 'v2.1.0'
-	},
+    {
+        src = 'https://github.com/lewis6991/gitsigns.nvim',
+        version = 'v2.1.0'
+    },
 })
 
 require('gitsigns').setup {
@@ -32,7 +32,7 @@ require('gitsigns').setup {
     },
     auto_attach                  = true,
     attach_to_untracked          = false,
-    current_line_blame           = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+    current_line_blame           = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
     current_line_blame_opts      = {
         virt_text = true,
         virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
