@@ -18,10 +18,6 @@ keymap('v', 'K', ":m '<-2<CR>gv=gv")
 keymap('v', 'L', 'w', opts)
 keymap('v', 'H', 'b', opts)
 
--- same as terminal emulator keymap
-keymap({ 'n', 'v' }, '<C-S-c>', 'y', opts)
-keymap({ 'n', 'v' }, '<C-S-v>', 'p', opts)
-
 -- back to normal mode from insert/visual mode
 keymap({ 'i', 'v' }, '<C-c>', '<Esc>', opts)
 keymap({ 't' }, '<Esc><Esc>', '<C-\\><C-n>', opts)
