@@ -32,7 +32,7 @@ local keymaps = {
     ['<A-H>'] = actions.preview_scrolling_left,
 }
 
-local function noop() end
+local function nop() end
 
 require('telescope').setup({
     defaults = {
@@ -49,8 +49,8 @@ require('telescope').setup({
         },
         git_bcommits = {
             mappings = {
-                i = { ["<CR>"] = noop },
-                n = { ["<CR>"] = noop },
+                i = { ["<CR>"] = nop },
+                n = { ["<CR>"] = nop },
             },
         },
     },

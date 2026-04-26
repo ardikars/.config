@@ -7,6 +7,8 @@ vim.pack.add({
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
+local function nop() end
+
 require("oil").setup({
     -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
     -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -56,8 +58,11 @@ require("oil").setup({
     -- Set to `false` to remove a keymap
     -- See :help oil-actions for a list of all available actions
     keymaps = {
-        ["l"] = { "actions.select", mode = "n" },
-        ["h"] = { "actions.parent", mode = "n" },
+        ["L"] = { "actions.select", mode = "n" },
+        ["H"] = { "actions.parent", mode = "n" },
+        ["J"] = { nop, mode = "n" },
+        ["K"] = { nop, mode = "n" },
+        ["<C-c>"] = "actions.preview",
         ["-"] = { "actions.open_cwd", mode = "n" },
     },
     -- Set to false to disable all of the above keymaps
