@@ -31,7 +31,8 @@
 ```
 
 ```text
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux > /dev/null 2>&1 && [ -n "$PS1" ] && \
+   ! echo "$TERM" | grep -q "tmux" && [ -z "$TMUX" ]; then
   tmux attach -t default || tmux new -s default
 fi
 ```
