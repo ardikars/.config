@@ -1,11 +1,5 @@
 ## Setup
 
-### Install `fish`
-
-```bash
-# dnf install fish
-```
-
 ### Install `tmux`
 
 ```bash
@@ -15,7 +9,7 @@
 ### Install Neovim (Latest version)
 
 ```bash
-# nvim/instal.sh
+# nvim/install.sh
 ```
 ```bash
 # For system clipboard supports
@@ -27,13 +21,12 @@
 ### Use `tmux` for every new terminal session
 
 ```bash
-# nvim /etc/profile.d/terminal.sh
+# nvim ~/.profile
 ```
 
-```text
-if command -v tmux > /dev/null 2>&1 && [ -n "$PS1" ] && \
-   ! echo "$TERM" | grep -q "tmux" && [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default
+```sh
+if [ -f "$HOME/.config/.profile" ]; then
+  . "$HOME/.config/.profile"
 fi
 ```
 
