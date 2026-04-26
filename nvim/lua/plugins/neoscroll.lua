@@ -10,6 +10,8 @@ local neoscroll = require('neoscroll')
 local keymap = {
     ["<A-k>"] = function() neoscroll.ctrl_u({ duration = 250 }) end,
     ["<A-j>"] = function() neoscroll.ctrl_d({ duration = 250 }) end,
+    ["<A-l>"] = function() neoscroll.scroll(-0.1, { move_cursor = false, duration = 100 }) end,
+    ["<A-h>"] = function() neoscroll.scroll(0.1, { move_cursor = false, duration = 100 }) end,
 }
 
 local modes = { 'n', 'v', 'x' }
