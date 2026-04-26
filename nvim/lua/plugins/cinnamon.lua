@@ -52,10 +52,10 @@ cinnamon.setup({
 })
 
 local keymap = {
-    ["<A-k>"] = function() cinnamon.scroll("5k") end,
-    ["<A-j>"] = function() cinnamon.scroll("5j") end,
-    ["<A-l>"] = function() cinnamon.scroll("5l") end,
-    ["<A-h>"] = function() cinnamon.scroll("5h") end,
+    ["<A-k>"] = function() cinnamon.scroll("10k") end,
+    ["<A-j>"] = function() cinnamon.scroll("10j") end,
+    ["<A-l>"] = function() cinnamon.scroll("10l") end,
+    ["<A-h>"] = function() cinnamon.scroll("10h") end,
 }
 
 local modes = { 'n', 'v', 'x' }
