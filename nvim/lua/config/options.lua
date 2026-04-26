@@ -29,6 +29,7 @@ local options = {
     shada = '',        -- stop marks from persisting
     splitright = true, -- force vertical splits to always open on the right
     lazyredraw = true, -- redraw the screen less during computationally intensive tasks
+    shell = "sh",
 }
 
 for k, v in pairs(options) do

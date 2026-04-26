@@ -38,7 +38,7 @@ fi
 # dnf install latexmk zathura zathura-pdf-poppler
 ```
 
-### Let terminal speak to you!
+### Classic fortune + cowsay + lolcat 
 
 ```bash
 # dnf install fortune 
