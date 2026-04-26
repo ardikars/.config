@@ -44,9 +44,10 @@ fi
 # dnf install latexmk zathura zathura-pdf-poppler
 ```
 
-### Random Quotes/Jokes
+### Let terminal speak to you!
 
 ```bash
 # dnf install fortune 
 # dnf install cowsay
+# dnf install lolcat
 ```
