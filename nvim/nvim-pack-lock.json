@@ -13,6 +13,11 @@
       "src": "https://github.com/akinsho/bufferline.nvim",
       "version": "'v4.9.1'"
     },
+    "cinnamon.nvim": {
+      "rev": "450cb3247765fed7871b41ef4ce5fa492d834215",
+      "src": "https://github.com/declancm/cinnamon.nvim",
+      "version": "'450cb3247765fed7871b41ef4ce5fa492d834215'"
+    },
     "darcula-dark.nvim": {
       "rev": "285c1fe3225ef19ef2639a3080551ee9669f263b",
       "src": "https://github.com/xiantang/darcula-dark.nvim",
