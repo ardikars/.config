@@ -5,7 +5,7 @@ vim.pack.add({
     },
 })
 
-vim.keymap.set('n', '=', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 require("oil").setup({
     -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
@@ -58,7 +58,7 @@ require("oil").setup({
     keymaps = {
         ["l"] = { "actions.select", mode = "n" },
         ["h"] = { "actions.parent", mode = "n" },
-        ["="] = { "actions.open_cwd", mode = "n" },
+        ["-"] = { "actions.open_cwd", mode = "n" },
     },
     -- Set to false to disable all of the above keymaps
     use_default_keymaps = true,
