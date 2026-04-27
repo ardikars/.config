@@ -21,3 +21,6 @@
 
 # do not ignore kitty
 !/kitty
+
+# do not ignore .profile 
+!/.profile

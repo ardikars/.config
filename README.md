@@ -18,10 +18,15 @@
 # dnf install xclip
 ```
 
-### Use `tmux` for every new terminal session
+### Load Configuration and Set Environment Variables (Use a POSIX-compliant shell) 
 
 ```bash
+# For dash, kash, or ash
 # nvim ~/.profile
+# Or bash
+# nvim ~/.bash_profile
+# Or zsh
+# nvim ~/.zprofile
 ```
 
 ```sh
@@ -30,7 +35,7 @@ if [ -f "$HOME/.config/.profile" ]; then
 fi
 ```
 
-### Latex
+### LaTex
 
 ```bash
 # dnf install latexmk zathura zathura-pdf-mupdf
@@ -38,7 +43,7 @@ fi
 # dnf install latexmk zathura zathura-pdf-poppler
 ```
 
-### Classic fortune + cowsay + lolcat 
+### Classic Fortune + Cowsay + Lolcat 
 
 ```bash
 # dnf install fortune 
