@@ -74,7 +74,7 @@ vim.lsp.config('jdtls', {
                 runtimes = {
                     {
                         name = 'JavaSE-25',
-                        path = vim.fn.stdpath('data') .. '/nvim-java/packages/openjdk/25/jdk-25.0.2',
+                        path = vim.fn.stdpath('data') .. '/nvim-java/packages/openjdk/17/jdk-17.0.12.jdk/Contents/Home',
                         default = true,
                     }
                 }
