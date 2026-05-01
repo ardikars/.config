@@ -63,7 +63,8 @@ require("oil").setup({
         ["J"] = { nop, mode = "n" },
         ["K"] = { nop, mode = "n" },
         ["<C-c>"] = "<Esc>",
-        ["-"] = { "actions.open_cwd", mode = "n" },
+        ["-"] = { "actions.parent", mode = "n" },
+        ["_"] = { "actions.open_cwd", mode = "n" },
     },
     -- Set to false to disable all of the above keymaps
     use_default_keymaps = true,

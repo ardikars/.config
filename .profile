@@ -39,7 +39,7 @@ fi
 umask 022
 export LANG=C.UTF-8
 export EDITOR="nvim"
-#export VISUAL="nvim"
+export VISUAL="nvim"
 
 [ -z "$PAGER" ] && export PAGER="less"
 
