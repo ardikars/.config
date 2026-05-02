@@ -152,6 +152,10 @@
       "src": "https://github.com/JavaHello/spring-boot.nvim",
       "version": "'218c0c26c14d99feca778e4d13f5ec3e8b1b60f0'"
     },
+    "telescope-cmdline.nvim": {
+      "rev": "7106ff7357d9d3cde3e71cd8fe8998d2f96a1bdd",
+      "src": "https://github.com/jonarrien/telescope-cmdline.nvim"
+    },
     "telescope.nvim": {
       "rev": "5255aa27c422de944791318024167ad5d40aad20",
       "src": "https://github.com/nvim-telescope/telescope.nvim",
