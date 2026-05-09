@@ -67,20 +67,4 @@ require('java').setup({
     },
 })
 
-vim.lsp.config('jdtls', {
-    settings = {
-        java = {
-            configuration = {
-                runtimes = {
-                    {
-                        name = 'JavaSE-25',
-                        path = vim.fn.stdpath('data') .. '/nvim-java/packages/openjdk/17/jdk-17.0.12.jdk/Contents/Home',
-                        default = true,
-                    }
-                }
-            },
-        }
-    }
-})
-
 vim.lsp.enable('jdtls')
