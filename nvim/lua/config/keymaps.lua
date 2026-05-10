@@ -17,9 +17,9 @@ keymap({ 'n' }, 'J', 'j', opts)
 keymap({ 'n' }, 'K', 'k', opts)
 
 -- back to normal mode from insert/visual mode
-keymap({ 'n', 'i', 'v' }, '<C-c>', '<Esc>', opts)
-keymap({ 'n', 'i', 'v' }, '<A-c>', '<Esc>', opts)
-keymap({ 'n', 'i', 'v' }, '<A-c>', '<Esc>', opts)
+keymap({ 'n', 'i', 'v', 's' }, '<C-c>', '<Esc>', opts)
+keymap({ 'n', 'i', 'v', 's' }, '<A-c>', '<Esc>', opts)
+keymap({ 'n', 'i', 'v', 's' }, '<A-c>', '<Esc>', opts)
 keymap({ 't' }, '<Esc><Esc>', '<C-\\><C-n>', opts)
 
 -- disable Ex mode (a weird old mode from classic Vim)
