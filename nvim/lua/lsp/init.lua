@@ -45,6 +45,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
             end,
         })
         vim.keymap.set('i', '<C-space>', vim.lsp.completion.get, { desc = 'trigger autocompletion' })
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr })
         vim.keymap.set('i', '<A-j>', function()
             if vim.fn.pumvisible() == 1 then
                 return '<C-n>'
