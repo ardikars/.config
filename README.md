@@ -4,6 +4,7 @@
 
 ```bash
 # dnf install tmux
+# dnf install gitmux
 ```
 
 ### Install Neovim (Latest version)
