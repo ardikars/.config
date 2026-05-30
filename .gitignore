@@ -13,6 +13,9 @@
 # do not ignore tmux dir
 !/tmux/
 
+# do not ignore tmux dir
+!/fortune/
+
 # do not ignore README.md
 !/README.md
 

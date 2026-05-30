@@ -20,12 +20,12 @@ greeting() {
             _random_cow="$1"
 
             if command -v lolcat >/dev/null 2>&1; then
-                fortune -s | cowsay -f "$_random_cow" | lolcat
+                fortune "$HOME/.config/fortune" | cowsay -f "$_random_cow" | lolcat
             else
-                fortune -s | cowsay -f "$_random_cow"
+                fortune "$HOME/.config/fortune" | cowsay -f "$_random_cow"
             fi
         else
-            fortune
+            fortune "$HOME/.config/fortune"
         fi
     fi
 }

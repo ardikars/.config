@@ -16,7 +16,7 @@ require('plugins.nui')
 require('plugins.render-markdown')
 require('plugins.telescope')
 require('plugins.treesitter')
---require('plugins.avante')
+require('plugins.avante')
 
 require('lsp')
 require('lsp.lua')
