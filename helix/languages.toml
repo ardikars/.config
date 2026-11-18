@@ -3,9 +3,17 @@ name = "java"
 language-servers = ["jdtls"]
 
 [language-server.jdtls]
-command = "jdtls"
+command = "sh"
 args = [
-  "--jvm-arg=-javaagent:/Users/langkuy/.m2/repository/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar"
+  "-c",
+  '''
+  LOMBOK=$(find "$HOME/.m2/repository/org/projectlombok/lombok" -name "lombok-*.jar" -type f | sort -V | tail -n 1)
+  if [ -z "$LOMBOK" ]; then
+    echo "Lombok JAR not found" >&2
+    exit 1
+  fi
+  exec jdtls --jvm-arg="-javaagent:$LOMBOK"
+  '''
 ]
 
 [[language]]
