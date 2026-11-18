@@ -1,0 +1,78 @@
+theme = "darcula"
+
+[editor]
+line-number = "relative"
+auto-pairs = false # defaults to `true`
+bufferline = "always"
+insert-final-newline = false
+trim-final-newlines = true
+trim-trailing-whitespace = true
+editor-config = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+
+[editor.lsp]
+display-progress-messages = true
+
+[editor.statusline]
+left = ["mode", "version-control", "spinner", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "position", "file-line-ending", "file-encoding"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+tab = "→"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.file-picker]
+hidden = true
+
+[keys.normal]
+C-c = "normal_mode"
+A-k = "page_cursor_half_up"
+A-j = "page_cursor_half_down"
+A-S-h = ":buffer-previous"
+A-S-l = ":buffer-next"
+A-S-d = ":buffer-close"
+A-S-q = ":buffer-close!"
+S-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+D = ["extend_to_line_end", "delete_selection"]
+
+[keys.insert]
+C-c = "normal_mode"
+C-space = "completion"
+A-S-h = ":buffer-previous"
+A-S-l = ":buffer-next"
+A-S-d = ":buffer-close"
+A-S-q = ":buffer-close!"
+
+[keys.select]
+C-c = "normal_mode"
+A-S-h = ":buffer-previous"
+A-S-l = ":buffer-next"
+A-S-d = ":buffer-close"
+A-S-q = ":buffer-close!"
+S-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]

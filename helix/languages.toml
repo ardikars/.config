@@ -1,0 +1,33 @@
+[[language]]
+name = "java"
+language-servers = ["jdtls"]
+
+[language-server.jdtls]
+command = "jdtls"
+args = [
+  "--jvm-arg=-javaagent:/Users/langkuy/.m2/repository/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar"
+]
+
+[[language]]
+name = "go"
+language-servers = ["gopls"]
+
+[language-server.gopls]
+command = "gopls"
+
+[[language]]
+name = "python"
+language-servers = [ "basedpyright" ]
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "efm-lsp-eslint", only-features = [ "format" ] },
+  { name = "typescript-language-server", except-features = [ "format" ] }
+]
