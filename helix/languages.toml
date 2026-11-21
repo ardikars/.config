@@ -1,7 +1,12 @@
 [[language]]
 name = "rust"
-auto-format = true
-roots = ["Cargo.toml"]
+language-servers = ["rust-analyzer"]
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
 
 [[language]]
 name = "java"
