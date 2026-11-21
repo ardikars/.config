@@ -7,6 +7,9 @@
 # do not ignore nvim dir
 !/nvim/
 
+# do not ignore helix dir
+!/helix/
+
 # do not ignore git dir
 !/git/
 
@@ -25,5 +28,5 @@
 # do not ignore kitty
 !/kitty
 
-# do not ignore .profile 
+# do not ignore .profile
 !/.profile

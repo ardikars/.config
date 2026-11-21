@@ -58,7 +58,18 @@ A-S-d = ":buffer-close"
 A-S-q = ":buffer-close!"
 S-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 S-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-D = ["extend_to_line_end", "delete_selection"]
+B = [
+  ":echo %sh{if git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git ls-files --error-unmatch %{buffer_name} >/dev/null 2>&1; then git blame --line-porcelain -L %{cursor_line},+1 %{buffer_name} | awk '/^author /{author=substr($0,8)} /^author-time /{timestamp=$2} /^summary /{summary=substr($0,9)} END{if(system(\"uname -s | grep -q Darwin\")==0) cmd=\"date -r \" timestamp \" \\\"+%%Y-%%m-%%d\\\"\"; else cmd=\"date -d @\" timestamp \" \\\"+%%Y-%%m-%%d\\\"\"; cmd | getline datetime; close(cmd); printf \"%%s | %%s | %%s\",author,datetime,summary}'; else echo 'Not a tracked Git file'; fi}"
+]
+"-" = [
+  ':sh rm -f /tmp/unique-file',
+  ':sh rm -f /tmp/unique-cwd-file',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file --cwd-file=/tmp/unique-cwd-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':cd %sh{cat /tmp/unique-cwd-file}',
+  ':redraw',
+]
 
 [keys.insert]
 C-c = "normal_mode"
@@ -70,6 +81,8 @@ A-S-q = ":buffer-close!"
 
 [keys.select]
 C-c = "normal_mode"
+A-k = "page_cursor_half_up"
+A-j = "page_cursor_half_down"
 A-S-h = ":buffer-previous"
 A-S-l = ":buffer-next"
 A-S-d = ":buffer-close"

@@ -1,4 +1,9 @@
 [[language]]
+name = "rust"
+auto-format = true
+roots = ["Cargo.toml"]
+
+[[language]]
 name = "java"
 language-servers = ["jdtls"]
 

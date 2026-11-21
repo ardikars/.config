@@ -2,17 +2,17 @@ greeting() {
     # Check if fortune exists
     if command -v fortune > /dev/null 2>&1; then
         if command -v cowsay > /dev/null 2>&1; then
-            
+
             # Define the list of cows
             set -- default tux kitty bud-frogs cower llama moose sus
-            
+
             # date +%s is non-POSIX. We use date +%S (seconds 00-59)
             # which is mandated by POSIX, to ensure it works on all systems.
             _seed=$(date +%S)
-            
+
             # We add 0 to ensure it's treated as a decimal number
             _idx=$(( (10#$_seed) % $# ))
-            
+
             # Shifting by 0 is an error in some strict POSIX shells.
             if [ "$_idx" -gt 0 ]; then
                 shift "$_idx"
@@ -40,6 +40,7 @@ umask 022
 export LANG=C.UTF-8
 export EDITOR="nvim"
 export VISUAL="nvim"
+export HELIX_RUNTIME=$HOME/.local/share/helix/runtime
 
 [ -z "$PAGER" ] && export PAGER="less"
 
