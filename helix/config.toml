@@ -8,6 +8,10 @@ insert-final-newline = false
 trim-final-newlines = true
 trim-trailing-whitespace = true
 editor-config = false
+# Which API to use for clipboard interaction.
+# One of pasteboard (MacOS), wayland, x-clip, x-sel, win32-yank, termux, tmux, windows,
+# termcode, or none.
+clipboard-provider = "tmux"
 
 [editor.inline-diagnostics]
 cursor-line = "warning" # show warnings and errors on the cursorline inline
